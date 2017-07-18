@@ -5,7 +5,7 @@
 
 \${pageContext.request.contextPath} = ${pageContext.request.contextPath}
 
-
+${requestScope.list}
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
 <table align="center" border="0" cellpadding="5" cellspacing="2" width="100%" bordercolordark="white" bordercolorlight="black">
