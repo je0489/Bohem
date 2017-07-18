@@ -78,7 +78,7 @@
 					</TR>
 					<TR>
 						<Th><label for=PW>PASSWORD</label></Th>
-						<TD><INPUT TYPE=PASSWORD NAME=PW SIZE="20"></TD>
+						<TD><INPUT TYPE=PASSWORD NAME="PW" SIZE="20"></TD>
 					</TR>
 					<TR>	
 						<Th><label for=PW_CHECK>PASSWORD CONFIRM</label></Th>
@@ -87,21 +87,21 @@
 					</TR>
 					<TR>	
 						<Th><label for=NAME>NAME</label></Th>
-						<TD><INPUT TYPE=TEXT NAME=NAME SIZE=10 ></TD>
+						<TD><INPUT TYPE=TEXT NAME="NAME" SIZE=10 ></TD>
 					</TR>
 					<TR>	
 						<Th><label for=PHONENO>MOBILE NUMBER</label></Th>
-						<TD><SELECT SIZE=1 NAME=TEL1>
+						<TD><SELECT SIZE=1 NAME="TEL1">
 						<option SELECTED> 010</option>
 						<option> 011</option>
 						<option> 017</option>
 						<option> 018</option>
 						<option> 019</option>
-						</SELECT> - <INPUT TYPE=TEXT NAME=TEL2 SIZE="4" Maxlength=4> - <INPUT TYPE=TEXT NAME=TEL3 SIZE="4" Maxlength=4></TD>
+						</SELECT> - <INPUT TYPE=TEXT NAME="TEL2 "SIZE="4" Maxlength=4> - <INPUT TYPE=TEXT NAME="TEL3" SIZE="4" Maxlength=4></TD>
 					</TR>
 					<TR>
 						<Th><label for=EMAIL>E-MAIL</label></Th>
-						<TD><INPUT TYPE=TEXT NAME=EMAIL_ID SIZE=15> @ <INPUT TYPE=TEXT NAME=EMAIL_ADDRESS SIZE=15></TD>
+						<TD><INPUT TYPE=TEXT NAME="EMAIL_ID" SIZE=15> @ <INPUT TYPE=TEXT NAME="EMAIL_ADDRESS" SIZE=15></TD>
 					</TR>
 					<TR  id="none"/>
 					<TR >
