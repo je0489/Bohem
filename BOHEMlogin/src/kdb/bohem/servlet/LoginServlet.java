@@ -24,5 +24,4 @@ public class LoginServlet extends HttpServlet {
 		 * forward index.html
 		 */
 	}
-
 }

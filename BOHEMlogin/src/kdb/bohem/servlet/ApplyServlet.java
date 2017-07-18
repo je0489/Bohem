@@ -49,5 +49,4 @@ public class ApplyServlet extends HttpServlet {
 		 * response.sendRedirect("index.html");
 		 */
 	}
-
 }
