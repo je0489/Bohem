@@ -17,42 +17,46 @@
 	</style>
 	<script language=javascript>		
 		function openConfirmID(input) {
-			alert(input.ID.value);
+			var id = input.ID.value;
+			var idCheck = false;
+			if ( id == "" ) {
+				alert("아이디를 입력해주세용");
+				return;
+			}
+			url = "confirmIDView.jsp?id=" + id;
+			window.open(url,"confirm","width=330,height=140");
 		}
 		
 		function passchk(){   // 비밀번호 재확인
-			   var pw=document.ApplyForm.PW.value;
-			   var pw_check=document.ApplyForm.PW_CHECK.value;
+			   var pw=document.applyForm.PW.value;
+			   var pw_check=document.applyForm.PW_CHECK.value;
 			   if(pw_check.length==0 || pw_check==null){
-				   document.ApplyForm.PWCK.value="비밀번호를 입력하세요.";
+				   document.applyForm.PWCK.value="비밀번호를 입력하세요.";
 			   }
 			   else if(pw!=pw_check){
-				   document.ApplyForm.PWCK.value="비밀번호가 다릅니다.";
+				   document.applyForm.PWCK.value="비밀번호가 다릅니다.";
 			   }else{
-				   document.ApplyForm.PWCK.value="비밀번호가 동일합니다.";
+				   document.applyForm.PWCK.value="비밀번호가 동일합니다.";
 			   }
 			  return;
 		}
 		
-		function checkIt() {
-			var input = document.ApplyForm;
-			if (!input.ID.value) {
+		function checkEmptySpace() {
+			var input = document.applyForm;
+			if (input.ID.value=="") {
 					alert("아이디를 입력하세요");
 				return false;
-			} else if(!input.PW.value) {
+			} else if(input.PW.value=="") {
 					alert("비밀번호를 입력하세요.");
 				return false;
-			} else if (!input.NAME.value) {
+			} else if (input.NAME.value=="") {
 					alert("이름을 입력하세요.");
 				return false;
-			} else if (!input.TEL2.value||!input.TEL3.value) {
+			} else if (input.TEL2.value==""||input.TEL3.value=="") {
 					alert("핸드폰 번호를 입력하세요.");
 				return false;
-			} else if (!input.EMAIL_ID.value||!input.EMAIL_ADDRESS.value) {
+			} else if (input.EMAIL_ID.value==""||input.EMAIL_ADDRESS.value=="") {
 					alert("이메일을 입력하세요.");
-				return false;
-			} else if (!input.ANSWER.value) {
-					alert("비밀번호 힌트에 대한 답을 입력하세요.");
 				return false;
 			}
 		}
@@ -61,7 +65,7 @@
 <body>
 	<div align=center>
 		<section>
-			<form name = "ApplyForm" method="post" action="apply" >
+			<form name = "applyForm" method="post" action="apply" onSubmit="return checkEmptySpace()">
 				<table>
 					<caption><a href="index.html"><h1>BOHEM</h1></a>
 					<hr color="#5d5d5d"></caption>

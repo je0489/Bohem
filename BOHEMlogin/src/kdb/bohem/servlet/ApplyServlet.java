@@ -20,7 +20,11 @@ public class ApplyServlet extends HttpServlet {
 		String pw =  request.getParameter("PW");
 		String name =  request.getParameter("NAME");
 		String tel =  request.getParameter("TEL1")+request.getParameter("TEL2")+request.getParameter("TEL3");
-		String email =  request.getParameter("EMAIL_ID")+"@"+request.getParameter("EMAIL_ADDRESS");	
+		String email =  request.getParameter("EMAIL_ID")+"@"+request.getParameter("EMAIL_ADDRESS");
+		
+		/**
+		 * response.sendRedirect("index.html");
+		 */
 	}
 
 }
