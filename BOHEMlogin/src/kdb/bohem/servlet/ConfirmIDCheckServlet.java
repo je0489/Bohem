@@ -15,7 +15,7 @@ public class ConfirmIDCheckServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
-		
+
 		/**
 		 * 아이디 중복 체크	/	true 아이디 중복 X 가입 가능
 		 * 						/	false 중복
