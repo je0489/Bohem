@@ -34,14 +34,16 @@ public class RecipeDAOImpl implements RecipeDAO {
 
 	@Override
 	public List<Recipe> select(String keyword) throws SQLException {
-		
+		System.out.println("dapimpl"+keyword);
 		Connection con =DBUtil.getConnection();
 		PreparedStatement ps = null;
 		ResultSet rs= null;
 		List<Recipe> recipelist = new ArrayList<Recipe>();
+		System.out.println("dapimpl2"+keyword);
 		try{
-			ps = con.prepareStatement("select * from recipe where recipetitle like '%?%'");
-			ps.setString(1, keyword);
+			
+			ps = con.prepareStatement("select * from recipe where recipetitle like '%"+keyword+"%'");
+			//ps.setString(1, keyword);
 
 			rs = ps.executeQuery();
 			while(rs.next()){

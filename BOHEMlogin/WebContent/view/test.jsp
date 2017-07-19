@@ -23,12 +23,14 @@
 	</c:when>
 	<c:otherwise>
 	<c:forEach items = "${requestScope.recipelist}" var ="Recipe" >
+		<tr>
 		<td><p align="center"><span style="font-size:9pt;">
 		 ${Recipe.recipeIndex}</span></p>
 		</td>
 		<td><p align="center"><span style="font-size:9pt;">
 		 ${Recipe.recipeTitle}</span></p>
 		</td>
+		</tr>
 	</c:forEach>
 	</c:otherwise>
 	</c:choose>

@@ -14,6 +14,7 @@ public class RecipeService {
 	}
 	
 	public static List<Recipe> select(String keyword) throws SQLException {
+		System.out.println("recipeservice");
 		return recipeDao.select(keyword);
 	}
 }
