@@ -1,4 +1,4 @@
-package kdb.controller;
+package kdb.bohem.controller;
 
 import java.io.IOException;
 
@@ -7,6 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public interface Action {
-   void execute(HttpServletRequest request, HttpServletResponse respons)
-				   throws ServletException, IOException;
+	void execute(HttpServletRequest request, HttpServletResponse response)
+	throws ServletException, IOException;
 }

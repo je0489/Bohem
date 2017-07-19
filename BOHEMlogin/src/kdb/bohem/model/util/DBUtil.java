@@ -1,63 +1,60 @@
 package kdb.bohem.model.util;
+/**
+ * JDBC를 위한 로드, 연결, 닫기
+ * */
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.sql.DataSource;
-
 public class DBUtil {
-	static DataSource ds ;
-	//로드
+   /**
+    * 로드
+    * */
 	static{
 		try{
-		 Context initContext = new InitialContext();//context.xml문서
-		  ds = 
-		 (DataSource)initContext.lookup("java:/comp/env/jdbc/myoracle");
-		
-		}catch(NamingException e){
+			Class.forName(DbProperty.DRIVER_NAME);
+		}catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
-	//연결
-	public static Connection  getConnection(){
+   /**
+    * 연결
+    * */
+	public static Connection getConnection()throws SQLException{
+		return DriverManager.getConnection(DbProperty.URL,DbProperty.USER_ID, DbProperty.USER_PWD);
+	}
+	
+   /**
+    * 닫기
+    * */
+	public static void dbClose(Connection con , Statement st ){
 		try{
-			return ds.getConnection();
-		}catch(SQLException e){
+		 if(st!=null)st.close();
+		 if(con!=null)con.close();
+		}catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return null;
 	}
 	
-	
-	//닫기
 	public static void dbClose(Connection con, Statement st, ResultSet rs){
 		try{
-			if(rs!=null){
-				rs.close();
-				rs=null;
-			  }
-			if(st!=null){
-				st.close();
-				st=null;
-			}
-			if(con!=null){
-				con.close();
-				con=null;
-			}
-		}catch(Exception e){
+		 if(rs!=null)rs.close();
+		 if(st!=null)st.close();
+		 if(con!=null)con.close();
+		}catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
-
+	
+	
 }
+
+
+
 
 
 
