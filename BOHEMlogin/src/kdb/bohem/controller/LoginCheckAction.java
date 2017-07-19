@@ -29,7 +29,7 @@ public class LoginCheckAction implements Action {
 			if (loginCheck==true){
 				session.setAttribute("id",userid);
 			}
-			url="loginView.jsp";
+			url="view/loginView.jsp";
 		
 		}catch (Exception e){
 			e.printStackTrace();

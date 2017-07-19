@@ -19,7 +19,7 @@ public class LogoutAction implements Action {
 		LoginCheckService LoginCheckService = new LoginCheckService();
 		try{
 			session.invalidate();
-			url = "loginView.jsp";
+			url = "view/loginView.jsp";
 		}catch(Exception e){
 			e.printStackTrace();
 			request.setAttribute("errorMsg", e.getMessage());

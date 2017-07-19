@@ -26,7 +26,7 @@ public class ConfirmIDCheckServlet extends HttpServlet {
 		String userid = request.getParameter("id");
 		
 		UserDao UserDao = new UserDaoImpl();
-		String urlPath = "confirmIDView.jsp";
+		String urlPath = "view/confirmIDView.jsp";
 		try{	
 		
 		

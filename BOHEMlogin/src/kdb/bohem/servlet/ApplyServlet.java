@@ -30,11 +30,11 @@ public class ApplyServlet extends HttpServlet {
 		
 		//저장된 dto 정보를 dao전달해서 등록을 완료
 		UserDao UserDao = new UserDaoImpl();
-		String urlPath = "applyView.jsp";
+		String urlPath = "view/applyView.jsp";
 		try{	
 		int result = UserDao.insert(UserDto);
 		if(result>0){
-			urlPath = "homeView.jsp";
+			urlPath = "view/homeView.jsp";
 		}else{
 			request.setAttribute("errorMsg","등록안됨");
 			request.setAttribute("redirectPath","index.html");
