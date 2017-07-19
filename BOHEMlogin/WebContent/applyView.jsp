@@ -17,13 +17,8 @@
 	</style>
 	<script language=javascript>		
 		function openConfirmID(input) {
-			var id = input.ID.value;
-			var idCheck = false;
-			if ( id == "" ) {
-				alert("아이디를 입력해주세용");
-				return;
-			}
-			url = "confirmIDView.jsp?id=" + id;
+		
+			url = "confirmIDView.jsp";
 			window.open(url,"confirm","width=330,height=140");
 		}
 		
@@ -72,7 +67,7 @@
 					<TR id="none"/>
 					<TR>
 						<th>ID</th>
-						<td><input type="text" name="ID" size="10">&nbsp;
+						<td><input type="text" name="ID" size="10" readonly="readonly">&nbsp;
 						<input type="button" name="ID_CHECK" value="ID CHECK" onClick="openConfirmID(this.form)">
 						</td>
 					</TR>

@@ -16,13 +16,17 @@ public interface UserDao {
 		  * 모델번호에 해당하는 레코드 검색
 		  * @param : boolean flag - true이면 조회수 증가,  false이면 조회증가 안함.
 		  * */
-	  UserDto selectByModelNum(int userindex, boolean flag) throws SQLException;
+	 
 	  
 	/**
 	 * 레코드 삽입
 	 * @return : 1이상 -삽입성공 , 0 - 삽입실패
 	 * */
 	  int insert(UserDto userdto) throws SQLException;
+
+	
+
+	boolean checkId(String  userid) throws SQLException;
 	  
 	  /**
 	   * 모델번호에 해당하는 레코드 삭제

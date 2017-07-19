@@ -59,9 +59,26 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public UserDto selectByModelNum(int userindex, boolean flag) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+	//중복체크
+	public boolean checkId(String userid) throws SQLException {
+		Connection con =DBUtil.getConnection();
+		PreparedStatement ps =null;
+		ResultSet rs = null;
+		
+		try{
+			ps=con.prepareStatement("select userid  from userinfo where userid=?");
+			ps.setString(1, userid.trim());
+			rs=ps.executeQuery();
+			if(rs.next()){
+				return true;
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			DBUtil.dbClose(con, ps, rs);
+		}
+		return false;
 	}
 
 }
