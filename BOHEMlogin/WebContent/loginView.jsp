@@ -71,12 +71,16 @@
 				</c:when>
 				<c:otherwise>
 					<H1>${sessionScope.id} 님 환영합니다~~!</H1>
+					<hr>
+					<h4>
+						'나홀로레시피'에서는 엄선된 레시피를 통해<br>
+						집에서 만들 수 있는 특별한 식사를 안내합니다.
+						</h4>
+					<br>
+					
 					<a style="color:black;" href="comm?command=logout"> logout </a>
-					<!--
-					<form action="comm?command=logout" METHOD="post">
-						<input type ="submit" value ="logout">
-					</form>
-					-->
+					
+					
 				</c:otherwise>
 			</c:choose>
 		</section>

@@ -17,7 +17,7 @@ public class InsertAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("»ðÀÔÇÔ¼ö?");
+		//System.out.println("»ðÀÔÇÔ¼ö?");
 		try{
 			
 			int comentIndex = 1;
@@ -29,7 +29,7 @@ public class InsertAction implements Action {
 			Comment coment= new Comment(comentIndex, comentComent, userIndex, recipeIndex, comentDate);
 			System.out.println(coment);
 			if(CommentService.insert(coment)>0){
-				response.sendRedirect("contentsView.html");
+				response.sendRedirect("view/contentsView.html");
 				return;
 			}
 			
