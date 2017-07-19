@@ -43,7 +43,7 @@ public class UserDaoImpl implements UserDao {
 		PreparedStatement ps =null;
 		int result =0;
 		try{
-			ps = con.prepareStatement("insert into Electronics values(sequser.nextval,?,?,?,?,?)");
+			ps = con.prepareStatement("insert into userinfo values(sequser.nextval,?,?,?,?,?)");
 			ps.setString(1, userdto.getUserid());
 			ps.setString(2, userdto.getUserpwd());
 			ps.setString(3, userdto.getUsername());

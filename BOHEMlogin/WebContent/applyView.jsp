@@ -97,7 +97,7 @@
 						<option> 017</option>
 						<option> 018</option>
 						<option> 019</option>
-						</SELECT> - <INPUT TYPE=TEXT NAME="TEL2 "SIZE="4" Maxlength=4> - <INPUT TYPE=TEXT NAME="TEL3" SIZE="4" Maxlength=4></TD>
+						</SELECT> - <INPUT TYPE=TEXT  NAME="TEL2" SIZE="4" Maxlength=4> - <INPUT TYPE=TEXT NAME="TEL3" SIZE="4" Maxlength=4></TD>
 					</TR>
 					<TR>
 						<Th><label for=EMAIL>E-MAIL</label></Th>
