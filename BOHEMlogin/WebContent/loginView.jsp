@@ -32,6 +32,11 @@
     <![endif]-->
     
 	<title> BOHEM이 짱이거든요? </title>
+<script>
+	function openApplyView() {
+		location.href="applyView.jsp";
+	}
+</script>
 </head>
 <body style="background: #FD847C;">
 	<div align=center>
@@ -58,7 +63,7 @@
 									<input type="submit" class="page-scroll btn btn-default btn-xl sr-button login-button" value="login">
 								</td>
 								<td>
-									<input type="button" value="apply" class="page-scroll btn btn-default btn-xl sr-button apply-button">
+									<input type="button" value="apply" onclick="openApplyView()" class="page-scroll btn btn-default btn-xl sr-button apply-button">
 								</td>
 							</tr>
 						</table>
