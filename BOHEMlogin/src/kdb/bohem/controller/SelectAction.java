@@ -1,4 +1,4 @@
-package kdb.controller;
+package kdb.bohem.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -8,34 +8,25 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kdb.model.dto.Electronics;
-import kdb.model.service.ElecService;
+import kdb.bohem.model.dto.Comment;
+import kdb.bohem.model.service.CommentService;
 
-public class SelectElecAction implements Action {
+public class SelectAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String url="errorView/error.jsp";
-		try{	
-		 List<Electronics> list = ElecService.selectAll();
-		 request.setAttribute("list", list);//viewpage에서 ${list}
-		 url="elecView/list.jsp";
-		 
+		String url ="errorView/error.jsp";
+		try{
+			List<Comment> comlist = CommentService.selectAll();
+			request.setAttribute("comlist", comlist); // viewpage 에서 ${list}
+			url="view/commentList.jsp";
 		}catch(SQLException e){
 			e.printStackTrace();
 			request.setAttribute("errorMsg", e.getMessage());//뷰페이지 ${errorMsg}
 		}
 		
 		 request.getRequestDispatcher(url).forward(request, response);
-		
+			
 	}
 
 }
-
-
-
-
-
-
-
