@@ -73,7 +73,7 @@
 					</form>
 				</c:when>
 				<c:otherwise>
-					<h2 class=" section-heading">${sessionScope.id} 님 맛있는 식사하세요 !</h2>
+					<h2 class=" section-heading">${sessionScope.username} 님 맛있는 식사하세요 !</h2>
 					<hr class="light">
 					<h5> ' 나홀로레시피 ' 에서는 엄선된 레시피를 통해 <br>
 					    집에서 만들 수 있는 특별한 식사를 안내합니다.</h5><p>

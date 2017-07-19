@@ -36,6 +36,8 @@ public interface UserDao {
 	boolean checkIdPwd(String userid, String userpwd) throws SQLException ;
 	
 	boolean logout()throws SQLException;
+	
+	String whoami(String userid) throws SQLException;
 	 
 }
 

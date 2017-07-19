@@ -18,4 +18,8 @@ public class LoginCheckService {
 		return userDao.logout();
 	}
 	
+	public String whoami(String userid) throws SQLException{
+		return userDao.whoami(userid);
+	}
+	
 }
