@@ -17,7 +17,7 @@
 	</style>
 	<script language=javascript>		
 		function openConfirmID(input) {
-			url = "confirmIDView.jsp";
+			url = "view/confirmIDView.jsp";
 			window.open(url,"confirm","width=330,height=140");
 		}
 		
