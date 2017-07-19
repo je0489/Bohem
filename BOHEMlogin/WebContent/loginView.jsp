@@ -45,7 +45,7 @@
 				<c:when test="${empty sessionScope.id}">
 						<h2 class="section-heading">LOGIN</h2>
 					     <hr class="light">
-					<form action="login" METHOD="post">
+					<form action="comm?command=logincheck" METHOD="post">
 						<table align="center">
 							<tr>
 								<td COLSPAN="3" ALIGN=CENTER></td>
@@ -71,6 +71,12 @@
 				</c:when>
 				<c:otherwise>
 					<H1>${sessionScope.id} 님 환영합니다~~!</H1>
+					<a style="color:black;" href="comm?command=logout"> logout </a>
+					<!--
+					<form action="comm?command=logout" METHOD="post">
+						<input type ="submit" value ="logout">
+					</form>
+					-->
 				</c:otherwise>
 			</c:choose>
 		</section>

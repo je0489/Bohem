@@ -80,5 +80,30 @@ public class UserDaoImpl implements UserDao {
 		}
 		return false;
 	}
+	
+	public boolean checkIdPwd(String userid, String userpwd) throws SQLException {
+		Connection con =DBUtil.getConnection();
+		PreparedStatement ps =null;
+		ResultSet rs = null;
+		
+		try{
+			ps=con.prepareStatement("select userid  from userinfo where userid=? and userpwd=? ");
+			ps.setString(1, userid.trim());
+			ps.setString(2, userpwd.trim());
+			rs=ps.executeQuery();
+			if(rs.next()){
+				return true;
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			DBUtil.dbClose(con, ps, rs);
+		}
+		return false;
+	}
+	public boolean logout() throws SQLException{
+		return false;
+	}
 
 }

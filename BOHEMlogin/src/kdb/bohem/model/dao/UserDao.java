@@ -33,11 +33,9 @@ public interface UserDao {
 	   * @return : 1이상 -삭제성공 , 0 - 삭제실패
 	   * */
 	  
-	  
-	   /**
-	    * 모델번호에 해당하는 레코드 수정
-	    * @return : 1이상 -수정성공 , 0 - 수정실패
-	    * */
+	boolean checkIdPwd(String userid, String userpwd) throws SQLException ;
+	
+	boolean logout()throws SQLException;
 	 
 }
 

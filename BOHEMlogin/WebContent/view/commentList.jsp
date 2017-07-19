@@ -28,12 +28,12 @@ function sendDelete(){
 -->
 <table align="center" border="0" cellpadding="5" cellspacing="2" width="100%" bordercolordark="white" bordercolorlight="black">
 <colgroup>
-		<col width="7%" />
-		<col width="73%"/>
+		<!--<col width="7%" />-->
 		<col width="10%"/>
-		<col width="10%"/>
+		<col width="70%"/>
+		<col width="20%"/>
 	</colgroup>
-	<tr>
+	<!-- <tr>
         <td bgcolor="pink">
             <p align="center">
             <font color="white"><b><span style="font-size:9pt;">번호</span></b></font></p>
@@ -51,6 +51,7 @@ function sendDelete(){
         </td>
         
     </tr>
+    -->
     
     <c:choose>
     <c:when test="${empty requestScope.comlist}">
@@ -63,19 +64,20 @@ function sendDelete(){
     <c:otherwise>
 	<c:forEach items="${requestScope.comlist}" var="comDto" varStatus="state">
 		    <tr>
-		        <td bgcolor="">
+		        <!-- <td bgcolor="">
 		            <p align="center"><span style="font-size:9pt;">
 		            ${state.count}</span></p>
+		        </td> -->
+		        <td bgcolor="">
+		            <p align="center"><span style="font-size:9pt;">
+		           ${comDto.userIndex}</span></p>
 		        </td>
 		        <td bgcolor="">
 					<p><span style="font-size:9pt;">
 					 ${comDto.comentComent}</span></p>
 		        </td>
 		        
-		        <td bgcolor="">
-		            <p align="center"><span style="font-size:9pt;">
-		           ${comDto.userIndex}</span></p>
-		        </td>
+		        
 		        <td bgcolor="">
 		            <p align="center"><span style="font-size:9pt;">
 		            ${comDto.comentDate}</span></p>
