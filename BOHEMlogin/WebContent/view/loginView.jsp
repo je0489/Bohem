@@ -34,7 +34,7 @@
 	<title> BOHEM이 짱이거든요? </title>
 <script>
 	function openApplyView() {
-		location.href="applyView.jsp";
+		location.href="view/applyView.jsp";
 	}
 	function doLogout() {
 		location.href="comm?command=logout";
