@@ -11,7 +11,7 @@
     <meta name="author" content="">
   
 	<!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bohemBootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -22,7 +22,7 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,42 +32,34 @@
     <![endif]-->
     
 	<title> BOHEM이 짱이거든요? </title>
-	<!-- 
-		F1 {font-size:50pt; font-family:Arial Black;}
-		F2 {font-size:11pt; letter-spacing:10pt;}
-		table{
-			width : 250px;
-			height : 100px;
-			border : solid gray 0px;
-		}
-		 -->
 </head>
-<body>
+<body style="background: #FD847C;">
 	<div align=center>
 		<section class="bg-primary">
 			<c:choose>
 				<c:when test="${empty sessionScope.id}">
 						<h2 class="section-heading">LOGIN</h2>
 					     <hr class="light">
-					<form action=login METHOD="post">
-						<table>
+					<form action="login" METHOD="post">
+						<table align="center">
 							<tr>
 								<td COLSPAN="3" ALIGN=CENTER></td>
 							</tr>
 							<tr>
 								<td colspan="2">
-								<input type="text" name=ID class="btn btn-default btn-xl sr-button" style="text-align:left" placeholder="id"></td>
+								<input type="text" name=ID class="btn btn-default btn-xl sr-button login" placeholder="id" ></td>
 							</tr>
 							<tr>
-								<td cols="2"><input type=PASSWORD name=PW class="btn btn-default btn-xl sr-button" style="text-align:left" placeholder="password"></td>
+								<td colspan="2">
+								<input type="password" name=PW class="btn btn-default btn-xl sr-button login login-button" placeholder="password"></td>
 							</tr>
-						</table>
-					</form>
-					<form action=applyView.jsp>
-						<table BORDER=0 CELLPADDING=2 ALIGN=CENTER>
 							<tr>
-								<td><input type=SUBMIT value=회원가입 style="width:140px; height:25px;"></td>
-								<td><input type=SUBMIT value=LOGIN style="width:140px; height:25px;"></td>
+								<td>
+									<input type="submit" class="page-scroll btn btn-default btn-xl sr-button login-button" value="login">
+								</td>
+								<td>
+									<input type="button" value="apply" class="page-scroll btn btn-default btn-xl sr-button apply-button">
+								</td>
 							</tr>
 						</table>
 					</form>

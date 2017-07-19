@@ -24,7 +24,7 @@
 				return;
 			}
 			url = "confirmIDView.jsp?id=" + id;
-			window.open(url,"confirm","width=330,height=140");
+			window.open(url,"confirm","width=1000,height=140");
 		}
 		
 		function passchk(){   // 비밀번호 재확인
@@ -107,7 +107,7 @@
 					<TR >
 						<TD COLSPAN=2 ALIGN=CENTER>
 						<INPUT TYPE=SUBMIT VALUE=확인>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<INPUT TYPE=RESET VALUE=취소 onClick="location.href='HomeProcessing.jsp'"></TD>
+						<INPUT TYPE=RESET VALUE=취소 onClick="location.href='homeView.jsp'"></TD>
 					</TR>
 				</table>
 			</form>

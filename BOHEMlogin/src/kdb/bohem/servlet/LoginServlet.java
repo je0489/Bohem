@@ -19,9 +19,10 @@ public class LoginServlet extends HttpServlet {
 		String id = request.getParameter("ID");
 		String pw =  request.getParameter("PW");
 		
+		response.sendRedirect("loginView.jsp");
 		/**
 		 * session.setAttribute("id",id);
-		 * forward index.html
+		 * forward loginView.jsp
 		 */
 	}
 }

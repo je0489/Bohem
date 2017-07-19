@@ -18,29 +18,31 @@
 </head>
 <body>
 	<div align="center">
-		<c:if test ="${requestScope.result eq 'false'}">
-			<b>
-				<F1>&nbsp;${requestScope.id}</F1>
-				<F2>&nbsp;는 이미 사용중인 아이디입니다.</F2>
-			</b>
-			<form name = "checkForm" method="post" action="confrimIDCheck">
+		<c:choose>
+			<c:when test ="${requestScope.result eq 'false'}">
 				<b>
-					<F2>다른 아이디를 입력하세요.</F2>
+					<F1>&nbsp;${requestScope.id}</F1>
+					<F2>&nbsp;는 이미 사용중인 아이디입니다.</F2>
+				</b>
+				<form name = "checkForm" method="post" action="confrimIDCheck">
+					<b>
+						<F2>다른 아이디를 입력하세요.</F2>
+					</b>
+					<br><br>
+					<input type="text" name=id>
+					<input type="submit" value="ID 중복확인">
+				</form>
+			</c:when>
+			<c:otherwise>
+				<b>
+					<F2>입력하신&nbsp;</F2>
+					<F1>${requestScope.id}</F1>
+					<F2>&nbsp;는 <br> 사용하실 수 있는 ID입니다.</F2>
 				</b>
 				<br><br>
-				<input type="text" name=id>
-				<input type="submit" value="ID 중복확인">
-			</form>
-		</c:if>
-		<c:otherwise>
-			<b>
-				<F2>입력하신&nbsp;</F2>
-				<F1>${requestScope.id}</F1>
-				<F2>&nbsp;는 <br> 사용하실 수 있는 ID입니다.</F2>
-			</b>
-			<br><br>
-			<input type=button value=닫기 onClick="setID()">
-		</c:otherwise>
+				<input type=button value=닫기 onClick="setID()">
+			</c:otherwise>
+		</c:choose>
 	</div>
 </body>
 </html>

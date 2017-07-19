@@ -13,7 +13,6 @@ body {
   margin: 0;
 }
 article,
-aside,
 details,
 figcaption,
 figure,
@@ -2250,6 +2249,7 @@ pre code {
 }
 table {
   background-color: transparent;
+  width: 50%;
 }
 th {
   text-align: left;
@@ -3015,23 +3015,54 @@ select[multiple].input-lg {
   border: 1px solid transparent;
   border-radius: 4px;
 }
-/* 지은 사용자 정의 css */
+/* 지은 사용자 정의 css -heejung */
 input.btn.btn-default.btn-xl.sr-button {
-    width: 100%;
+    width: 90%;
     font-size: 20px;
 }
 input.btn.btn-primary.btn-xl.page-scroll {
     margin-top: 2%;
 }
+input.page-scroll.btn.btn-default.btn-xl.sr-button {
+    width: 70%;
+    font-size: 13px;
+    color: #FFF;
+    margin-top: 10%;
+}
+input.page-scroll.btn.btn-default.btn-xl.sr-button.login-button {
+    background: #FF2A66;
+   	border: 3px solid #FF2A66;
+}
+input.page-scroll.btn.btn-default.btn-xl.sr-button.apply-button {
+    background: #FD847C;
+    border: 3px solid;
+}
+input.btn.btn-default.btn-xl.sr-button.login {
+    text-align:left; 
+    font-size: 15px; 
+    text-transform: lowercase; 
+    margin-bottom:2%;
+}
 iframe {
     width: 100%;
     border : none;
     overflow-x: hidden;
-    min-height:300px; 
+    min-height:350px; 
+    margin-bottom:5%;
 }
 section.bg-primary {
     padding: 0;
     text-align: center;
+}
+input.btn.btn-default.btn-xl.sr-button {
+    margin-top: 2%;
+}
+h2.section-heading {
+    padding-top: 5%;
+}
+label.color {
+    color: #FD847C;
+    padding-top: 1%;
 }
 .btn:focus,
 .btn:active:focus,
