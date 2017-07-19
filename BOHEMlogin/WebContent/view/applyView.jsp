@@ -30,19 +30,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<title> BOHEM APPLY</title>
-<!--  
-			a { 
-				text-decoration: none; 
-				color : black;
-			}
-			section { padding-top : 5%; }
-			input[type="text"] ,input[type="password"] { height : 20px; }
-			input[type="SUBMIT"] ,input[type="RESET"] { height : 50px; }
-			#none { height : 20px; }
--->
 	<script language=javascript>		
 		function openConfirmID(input) {
-			url = "view/confirmIDView.jsp";
+			url = "confirmIDView.jsp";
 			window.open(url,"confirm","width=330,height=140");
 		}
 		
@@ -84,7 +74,7 @@
 <body>
 	<div align=center>
 		<section>
-			<form name = "applyForm" method="post" action="apply" onSubmit="return checkEmptySpace()">
+			<form name = "applyForm" method="post" action="../apply" onSubmit="return checkEmptySpace()">
 				<table>
 					<caption><h1>BOHEM</h1>
 					<hr color="#5d5d5d"></caption>
