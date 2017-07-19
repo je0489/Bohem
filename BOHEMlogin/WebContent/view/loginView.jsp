@@ -11,18 +11,18 @@
     <meta name="author" content="">
   
 	<!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bohemBootstrap.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bohemBootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="../css/creative.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,6 +35,9 @@
 <script>
 	function openApplyView() {
 		location.href="applyView.jsp";
+	}
+	function doLogout() {
+		location.href="comm?command=logout";
 	}
 </script>
 </head>
@@ -70,17 +73,11 @@
 					</form>
 				</c:when>
 				<c:otherwise>
-					<H1>${sessionScope.id} 님 환영합니다~~!</H1>
-					<hr>
-					<h4>
-						'나홀로레시피'에서는 엄선된 레시피를 통해<br>
-						집에서 만들 수 있는 특별한 식사를 안내합니다.
-						</h4>
-					<br>
-					
-					<a style="color:black;" href="comm?command=logout"> logout </a>
-					
-					
+					<h2 class=" section-heading">${sessionScope.id} 님 맛있는 식사하세요 !</h2>
+					<hr class="light">
+					<h5> ' 나홀로레시피 ' 에서는 엄선된 레시피를 통해 <br>
+					    집에서 만들 수 있는 특별한 식사를 안내합니다.</h5><p>
+					<input type=button onclick="doLogout()" class="page-scroll btn btn-default btn-xl sr-button" value="logout">
 				</c:otherwise>
 			</c:choose>
 		</section>

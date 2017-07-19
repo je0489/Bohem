@@ -1112,7 +1112,7 @@ figure {
   margin: 0;
 }
 img {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 .img-responsive,
 .thumbnail > img,
@@ -3024,18 +3024,21 @@ input.btn.btn-primary.btn-xl.page-scroll {
     margin-top: 2%;
 }
 input.page-scroll.btn.btn-default.btn-xl.sr-button {
-    width: 70%;
+    width: 15%;
     font-size: 13px;
     color: #FFF;
-    margin-top: 10%;
+    background: #FF2A66;
+    border: 3px solid #FF2A66;
 }
 input.page-scroll.btn.btn-default.btn-xl.sr-button.login-button {
-    background: #FF2A66;
-   	border: 3px solid #FF2A66;
+	width: 70%;
+   	margin-top: 10%;
 }
 input.page-scroll.btn.btn-default.btn-xl.sr-button.apply-button {
+	width: 70%;
     background: #FD847C;
     border: 3px solid;
+    margin-top: 10%;
 }
 input.btn.btn-default.btn-xl.sr-button.login {
     text-align:left; 
@@ -3050,6 +3053,9 @@ iframe {
     min-height:350px; 
     margin-bottom:5%;
 }
+img.icon {
+	width : 50%;
+}
 section.bg-primary {
     padding: 0;
     text-align: center;
@@ -3063,6 +3069,9 @@ h2.section-heading {
 label.color {
     color: #FD847C;
     padding-top: 1%;
+}
+h2.section-heading {
+    font-weight: 700;
 }
 .btn:focus,
 .btn:active:focus,
