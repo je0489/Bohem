@@ -48,7 +48,7 @@
 				<c:when test="${empty sessionScope.id}">
 						<h2 class="section-heading">LOGIN</h2>
 					     <hr class="light">
-					<form action="comm?command=logincheck" METHOD="post">
+					<form action="../comm?command=logincheck" METHOD="post">
 						<table align="center">
 							<tr>
 								<td COLSPAN="3" ALIGN=CENTER></td>

@@ -84,7 +84,7 @@
 <body>
 	<div align=center>
 		<section>
-			<form name = "applyForm" method="post" action="apply" onSubmit="return checkEmptySpace()">
+			<form name = "applyForm" method="post" action="../apply" onSubmit="return checkEmptySpace()">
 				<table>
 					<caption><h1>BOHEM</h1>
 					<hr color="#5d5d5d"></caption>
