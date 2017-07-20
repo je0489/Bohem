@@ -88,6 +88,7 @@ function sendDelete(){
 		        <form name = "requestForm" method = post action="comm?command=delete">
 		        	<input type =hidden name ="comentIndex" value="${newcomDto.comentIndex}">
 		        	<input type =hidden name = "recipeIndex" value="${requestScope.recipeinfo.recipeIndex}">
+		        	<input type="hidden" name="userIndex" value ="${sessionScope.userindex}">
 		        	<input type = button value ="삭제" onClick="submit()">
 		       	</form>
 		        </td>
