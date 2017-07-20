@@ -3025,7 +3025,7 @@ input.btn.btn-primary.btn-xl.page-scroll.contentsView {
 	position: relative;
     width: 100%;
     position: absolute; 
-    width: 600px;
+    width: 28%;
     top: 85%;
 }
 table tr td.contentsView {
@@ -3035,7 +3035,7 @@ table.contentsView {
 	display: block;
     width: 100%;
     height: 590px;
-    border:1px solid black;
+    border:0;
 	padding: 2% 3%;
 }
 iframe {

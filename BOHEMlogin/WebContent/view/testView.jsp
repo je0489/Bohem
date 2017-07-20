@@ -49,8 +49,8 @@
 				   
 					    <h2 class="section-heading" style="padding:0">
 					    <label class="contentsView padding">
-						    10분만에 만드는<br>이탈리아 원팬파스타</h2>
-						    <!-- ${requestScope.recipeinfo.recipeTitle}  -->
+						
+						 ${requestScope.recipeinfo.recipeTitle}
 					    </label>
 					    <hr style="max-width: 95%;">
 				    </td>
@@ -58,13 +58,8 @@
 			    <tr>
 					<td colspan="4">
 			    		<h5 class="section-heading contentsView">
-			    		< 재료 ><br>
-			    		양송이버섯 2개/소세지 (중간크기) 3개 /<br>
-			    		방울 토마토 6개/양파 1/4개 브로콜리 6조각/<br>
-			    		스파게티면 75g/다진마늘 1ts/토마토소스 100g<br>
-			    		 페페론치노 5~6개/드라이바질/소금,후추/물 350ml/<br>
-			    		 슈레드 치즈/드라이파슬리 < 레시피 > Step1. 양송이  뿌린다.
-			    			<!-- ${requestScope.recipeinfo.recipeContent} -->
+			    		
+			    		 ${requestScope.recipeinfo.recipeContent} 
 			    		</h5>
 					</td>
 			    </tr>
@@ -115,7 +110,6 @@
 					<form method="post" action="comm?command=insert" >
 						<td colspan="4" width="100%">
 							<input class="btn btn-primary btn-xl page-scroll contentsView" type="text" name="comment" placeholder="댓글 입력하세염" style="text-align: left;">
-							<hr style="max-width:95%; border-color:gray; margin: auto 2% 3%;">
 							<input type="submit" class="hidden">
 						</td>
 						<input type="hidden" name="recipeIndex" value ="${requestScope.recipeinfo.recipeIndex}">
