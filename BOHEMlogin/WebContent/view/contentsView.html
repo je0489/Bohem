@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BOHEM 짱</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"> </script>
+	<script type="text/javascript">
+		var likingState = false;
+		$(window).resize( function(){ resizeYoutube(); });
+		$(function(){resizeYoutube();});
+		function resizeYoutube() { 
+			$("iframe").each(function() { 
+				if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){
+				 	$(this).css("width","50%");
+				 	$(this).css("height",Math.ceil(parseInt($(this).css("width")) * 480 / 854 ) + "px");
+				} 
+			}); 
+		}
+		function liking(){
+			if(likingState == false ) {
+ 				alert("좋아요 눌렀다");
+ 				$('#icon').css('color','orange');
+ 				likingState = true;
+			}
+ 			else {
+ 				alert("좋아요 취소");
+ 				$('#icon').css('color','black');
+ 				likingState = false;
+ 			}
+		}
+		function checkValid(){
+			return true;
+		}
+	</script>
+	<style type="text/css">
+
+			section article { 
+				
+				border: solid rgba(161, 161, 161,0.2) 1px;
+				float:left;
+			}
+		table {
+			margin : 0 1%;
+		}
+		#icon {
+			font-size : x-large; 
+			text-align : left; 
+		}
+		#button {
+			text-align: right;
+		}
+		input[type="text"]{
+			width : 100%;
+		}
+	</style>
+</head>
+<body>
+<table>
+	<tr>
+		<td width="250" height="500" rowspan="4" style="background-color:black"></td>
+		<td width="250" height="500" colspan="2" style="background-color:blue"></td>
+	</tr>
+	<tr>
+		<td width="250" height="500" colspan="2" style="background-color:skyblue"></td>
+	</tr>
+	<tr>
+		<td width="250" height="500" style="background-color:pink"></td>
+		<td width="250" height="500" style="background-color:yellow"></td>
+	</tr>
+	<tr>
+		<td width="250" height="500" colspan="2" style="background-color:red"></td>
+	</tr>
+</table>
+		<!-- 
+	<section>
+	<article style="marign:0px;width:400px;height:200px;float:left">
+		<form method="post" action="comm?command=insert" >
+			<table>
+				<tr>
+					<td rowspan="4">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/mt2Xt-H9eXU?autoplay=1" frameborder="0"  style="float:left"></iframe>
+					</td>
+					<td colspan="2" id="icon"><label onclick="liking()">♥</label></td>
+				</tr>
+				<tr>
+					<td colspan="2"><iframe width="100%" src="test.jsp" frameborder="0" allowfullscreen></iframe></td>
+				</tr>
+				<tr>
+					<td width="100%"><input type="text" name="comment" placeholder="댓글 입력하세염"></td>
+					<td id="button"><input type="submit" value="등록"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><iframe width="100%" src="comm" frameborder="0" allowfullscreen></iframe></td>
+				</tr>
+			</table>
+
+		</form>
+		</article>
+	</section>
+				 -->
+</body>
+</html>

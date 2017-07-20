@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-  
+
 	<!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bohemBootstrap.css" rel="stylesheet">
 
@@ -21,6 +21,12 @@
     <!-- Plugin CSS -->
     <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
+	<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<!-- Magnific Popup core JS file -->
+	<script src="../vendor/magnific-popup/jquery.magnific-popup.js"></script>
+   
     <!-- Theme CSS -->
     <link href="../css/creative.css" rel="stylesheet">
 
@@ -34,11 +40,24 @@
 	<title> BOHEM이 짱이거든요? </title>
 <script>
 	function openApplyView() {
-		location.href="applyView.jsp";
+		location.href="applyViewHTML.html";
 	}
 	function doLogout() {
 		location.href="../comm?command=logout";
 	}
+	
+	 $(document).ready(function() {
+	       $('.simple-ajax-popup-align-top').magnificPopup({
+	          type: 'ajax',
+	          alignTop: true,
+	          overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
+	       });
+
+	       $('.simple-ajax-popup').magnificPopup({
+	          type: 'ajax'
+	       });
+	       
+	    });
 </script>
 </head>
 <body style="background: #FD847C;">
@@ -46,10 +65,10 @@
 		<section class="bg-primary">
 			<c:choose>
 				<c:when test="${empty sessionScope.userid}">
-						<h2 class="section-heading">LOGIN</h2>
-					     <hr class="light">
+					<h2 class="section-heading">LOGIN</h2>
+					 <hr class="light">
 					<form action="../comm?command=logincheck" METHOD="post">
-						<table align="center">
+						<table align="center" class="login-form">
 							<tr>
 								<td COLSPAN="3" ALIGN=CENTER></td>
 							</tr>
@@ -66,7 +85,9 @@
 									<input type="submit" class="page-scroll btn btn-default btn-xl sr-button login-button" value="login">
 								</td>
 								<td>
-									<input type="button" value="apply" onclick="openApplyView()" class="page-scroll btn btn-default btn-xl sr-button apply-button">
+									<a class="simple-ajax-popup" href="applyView.html" target="_top">
+										<input type="button" value="apply" class="page-scroll btn btn-default btn-xl sr-button apply-button">
+									</a>
 								</td>
 							</tr>
 						</table>

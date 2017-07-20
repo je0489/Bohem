@@ -57,8 +57,11 @@ section {
 }
 /* 지은 사용자 정의 */
 section.apply-form {
-	margin : 2% 20%;
+	margin : 2% 2%;
 	border : 3px solid #FD847C;
+}
+input.btn.btn-default.btn-xl.sr-button {
+    margin-top: 2%;
 }
 /**/
 aside {
@@ -388,6 +391,12 @@ fieldset[disabled] .btn-primary.active {
 /* 지은 사용자 정의 */
 input.btn.btn-default.btn-xl.sr-button {
     margin-top: 2%;
+}
+.btn-idcheck {
+  padding: 5px 15px;
+}
+.btn-apply-form{
+	padding: 10px 20px;
 }
 .btn-primary .badge {
   color: #FD847C;
