@@ -49,7 +49,7 @@
 				   
 					    <h2 class="section-heading" style="padding:0">
 					    <label class="contentsView padding">
-						    10분만에 만드는<br>이탈리아 전통 원팬파스타</h2>
+						    10분만에 만드는<br>이탈리아 원팬파스타</h2>
 						    <!-- ${requestScope.recipeinfo.recipeTitle}  -->
 					    </label>
 					    <hr style="max-width: 95%;">
@@ -63,12 +63,7 @@
 			    		방울 토마토 6개/양파 1/4개 브로콜리 6조각/<br>
 			    		스파게티면 75g/다진마늘 1ts/토마토소스 100g<br>
 			    		 페페론치노 5~6개/드라이바질/소금,후추/물 350ml/<br>
-			    		 슈레드 치즈/드라이파슬리 < 레시피 > Step1. 양송이,<br>
-			    		 소세지, 방울토마토, 양파를 먹기 좋은 크기로 썬다.<br>
-			    		 Step2. 팬에 스파게티면 야채, 소세지, 다진마늘,<br>
-			    		 토마토소스, 페페론치노, 바질,소금,후추,물을 넣고 7~10분정도<br>
-			    		  면이 익을 때까지 끓인다. Step3. 접시에 담고 치즈와 파슬리를<br>
-			    		   뿌린다.
+			    		 슈레드 치즈/드라이파슬리 < 레시피 > Step1. 양송이  뿌린다.
 			    			<!-- ${requestScope.recipeinfo.recipeContent} -->
 			    		</h5>
 					</td>
