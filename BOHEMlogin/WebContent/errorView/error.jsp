@@ -5,16 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ERROR</title>
-<script>
-	alert();	
-	//alert('${requestScope.errorMsg}');
-</script>
 </head>
 <body>
-	죄송합니다. 문제가 발생하였습니다.<br>
-	발생된 문제 : <br>
-
-	<a href="index.html" target="_top"> 메인페이지로 돌아가기</a>
-	<a href="javascript:history.back()">뒤로가기</a>
+	<script>
+		var Msg = '에러발생' + '${requestScope.errorMsg}';
+		alert(Msg);
+		
+		top.location.href='${requestScope.redirectPath}';
+	</script>
 </body>
 </html>
