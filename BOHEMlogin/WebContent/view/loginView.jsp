@@ -85,7 +85,7 @@
 									<input type="submit" class="page-scroll btn btn-default btn-xl sr-button login-button" value="login">
 								</td>
 								<td>
-									<a class="simple-ajax-popup" href="applyView.html" target="_top">
+									<a class="simple-ajax-popup-align-top" href="applyView.html" target="_top_top">
 										<input type="button" value="apply" class="page-scroll btn btn-default btn-xl sr-button apply-button">
 									</a>
 								</td>
