@@ -34,9 +34,9 @@
 	<tr>
 		<td class="contentsView">
 		<!-- ${requestScope.recipeinfo.recipeSrc} -->
-			<iframe class="contentsView" width="560" height="315" src="https://www.youtube.com/embed/JpS562fdhcQ" frameborder="0"></iframe>
+			<iframe class="contentsView" width="560" height="315" src="${requestScope.recipeinfo.recipeSrc}" frameborder="0"></iframe>
 		</td>
-		<td class="contentsView" width="365px">
+		<td class="contentsView" width="35%">
 			<table class="contentsView">
 				<colgroup>
 					<col width="10%"/>
@@ -109,7 +109,7 @@
 				<tr>
 					<form method="post" action="comm?command=insert" >
 						<td colspan="4" width="100%">
-							<input class="btn btn-primary btn-xl page-scroll contentsView" type="text" name="comment" placeholder="댓글 입력하세염" style="text-align: left;">
+							<input class="btn btn-primary btn-contentsView page-scroll contentsView" type="text" name="comment" placeholder="댓글 입력하세염" style="text-align: left;">
 							<input type="submit" class="hidden">
 						</td>
 						<input type="hidden" name="recipeIndex" value ="${requestScope.recipeinfo.recipeIndex}">
