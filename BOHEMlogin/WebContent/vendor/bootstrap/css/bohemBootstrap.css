@@ -3021,12 +3021,11 @@ input.hidden {
     height: 0;
     background: transparent;
 }
-input.btn.btn-primary.btn-xl.page-scroll.contentsView {
+input.btn.btn-primary.btn-contentsView.page-scroll.contentsView {
 	position: relative;
     width: 100%;
-    position: absolute; 
-    width: 600px;
-    top: 85%;
+    width: 340px;
+    top: 500px;
 }
 table tr td.contentsView {
 	padding:0;

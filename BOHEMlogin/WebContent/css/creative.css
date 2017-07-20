@@ -399,11 +399,24 @@ fieldset[disabled] .btn-primary.active {
   border-color: #FD847C;
 }
 /* 지은 사용자 정의 */
+.btn-primary.btn-contentsView.page-scroll.contentsView:hover,
+.btn-primary.btn-contentsView.page-scroll.contentsView:focus,
+.btn-primary.btn-contentsView.page-scroll.contentsView.focus,
+.btn-primary.btn-contentsView.page-scroll.contentsView:active,
+.btn-primary.btn-contentsView.page-scroll.contentsView.active,
+.open > .dropdown-toggle.btn-primary {
+  color: white;
+  background-color: #FF2A66;
+  border-color: #FF2A66;
+}
 input.btn.btn-default.btn-xl.sr-button {
     margin-top: 2%;
 }
 .btn-idcheck {
   padding: 5px 15px;
+}
+.btn-contentsView {
+	padding: 10px 30px;
 }
 .btn-apply-form{
 	padding: 10px 20px;

@@ -32,10 +32,11 @@
     
 <table style="height:590px;	width: 100%;">
 	<tr>
-		<td class="contentsView" width="70%">
-			<iframe class="contentsView" width="560" height="315" src="${requestScope.recipeinfo.recipeSrc}" frameborder="0"></iframe>
-		</td>
 		<td class="contentsView">
+		<!-- ${requestScope.recipeinfo.recipeSrc} -->
+			<iframe class="contentsView" width="560" height="315" src="https://www.youtube.com/embed/JpS562fdhcQ" frameborder="0"></iframe>
+		</td>
+		<td class="contentsView" width="365px">
 			<table class="contentsView">
 				<colgroup>
 					<col width="10%"/>
@@ -49,7 +50,7 @@
 				   
 					    <h2 class="section-heading" style="padding:0">
 					    <label class="contentsView padding">
-						    10분만에 만드는<br>이탈리아 전통 원팬파스타</h2>
+						    10분만에 만드는<br>이탈리아 원팬 파스타</h2>
 						    <!-- ${requestScope.recipeinfo.recipeTitle}  -->
 					    </label>
 					    <hr style="max-width: 95%;">
@@ -119,7 +120,7 @@
 				<tr>
 					<form method="post" action="comm?command=insert" >
 						<td colspan="4" width="100%">
-							<input class="btn btn-primary btn-xl page-scroll contentsView" type="text" name="comment" placeholder="댓글 입력하세염" style="text-align: left;">
+							<input class="btn btn-primary btn-contentsView page-scroll contentsView" type="text" name="comment" placeholder="댓글 입력하세염" style="text-align: left;">
 							<hr style="max-width:95%; border-color:gray; margin: auto 2% 3%;">
 							<input type="submit" class="hidden">
 						</td>
