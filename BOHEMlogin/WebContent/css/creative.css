@@ -362,6 +362,16 @@ fieldset[disabled] .btn-default.active {
   background-color: #FF2A66;
   border-color: #FF2A66;
 }
+.btn-primary.btn-xl.page-scroll.contentsView:hover,
+.btn-primary.btn-xl.page-scroll.contentsView:focus,
+.btn-primary.btn-xl.page-scroll.contentsView.focus,
+.btn-primary.btn-xl.page-scroll.contentsView:active,
+.btn-primary.btn-xl.page-scroll.contentsView.active,
+.open > .dropdown-toggle.btn-primary {
+  color: white;
+  background-color: #FD847C;
+  border-color: #FD847C;
+}
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
