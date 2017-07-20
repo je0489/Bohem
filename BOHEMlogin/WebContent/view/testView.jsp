@@ -55,8 +55,20 @@ function sendDelete(){
     </tr>
     -->
        
+    <tr>
+    <td colspan="3">
+    ${requestScope.recipeinfo.recipeTitle}
+    </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+    ${requestScope.recipeinfo.recipeContent}
+    </td>
+    </tr>
     <c:choose>
     <c:when test="${empty requestScope.newComList}">
+  
+    
 	<tr>
         <td colspan="3">
             <p align="center"><b><span style="font-size:9pt;">등록된 댓글이 없습니다.</span></b></p>
