@@ -4,28 +4,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title></title>
-<SCRIPT language = javascript>
-function sendUpdate(){
-	document.requestForm.command.value ="update";
-	document.requestForm.submit();//전송해라- action에서 지정한 곳으로 이동.
-}
-
-function sendDelete(){
-	document.requestForm.command.value ="delete";
-	document.requestForm.submit();
-}
-
-</SCRIPT>
-
-</head>
-<body> 
--->
  <iframe width="560" height="315" src= "${requestScope.recipeinfo.recipeSrc}" frameborder="0"  style="float:left"></iframe>
 
 <table align="center" border="0" cellpadding="5" cellspacing="2" width="100%" bordercolordark="white" bordercolorlight="black">
@@ -35,26 +13,6 @@ function sendDelete(){
 		<col width="10%"/>
 		<col width="20%"/>
 	</colgroup>
-	<!-- <tr>
-        <td bgcolor="pink">
-            <p align="center">
-            <font color="white"><b><span style="font-size:9pt;">번호</span></b></font></p>
-        </td>
-        <td bgcolor="pink">
-            <p align="center"><font color="white"><b><span style="font-size:9pt;">내용</span></b></font></p>
-        </td>
-        <td bgcolor="pink">
-            <p align="center"><font color="white"><b><span style="font-size:9pt;">사용자</span></b></font></p>
-        </td>
-        <td bgcolor="pink">
-            <p align="center"><font color="white"><b><span style="font-size:9pt;">날짜</span></b></font></p>
-        </td>
-        <td bgcolor="pink">
-        </td>
-        
-    </tr>
-    -->
-       
     <tr>
     <td colspan="3">
     ${requestScope.recipeinfo.recipeTitle}
