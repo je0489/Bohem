@@ -11,24 +11,24 @@
     <meta name="author" content="">
 
 	<!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bohemBootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/vendor/bootstrap/css/bohemBootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
 	<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 	<!-- Magnific Popup core JS file -->
-	<script src="../vendor/magnific-popup/jquery.magnific-popup.js"></script>
+	<script src="${pageContext.request.contextPath}/vendor/magnific-popup/jquery.magnific-popup.js"></script>
    
     <!-- Theme CSS -->
-    <link href="../css/creative.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/creative.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,7 +40,7 @@
 	<title> BOHEM이 짱이거든요? </title>
 <script>
 	function openApplyView() {
-		url = "applyView.html";
+		url = "${pageContext.request.contextPath}/view/applyView.html";
 		var h = (screen.availHeight/2)-350;
 		var w = (screen.availWidth/2)-350;
 		var setting = "width=700,height=610,resizeable=yes,left="+ w + ",top=" + h;
@@ -48,7 +48,7 @@
 	}
 	
 	function doLogout() {
-		location.href="../comm?command=logout";
+		location.href="${pageContext.request.contextPath}/comm?command=logout";
 	}
 	
 	function checkEmptySpace() {
@@ -71,7 +71,7 @@
 				<c:when test="${empty sessionScope.userid}">
 					<h2 class="section-heading">LOGIN</h2>
 					 <hr class="light">
-					<form name = "loginForm" action="../comm?command=logincheck" METHOD="post" onSubmit="return checkEmptySpace()">
+					<form name = "loginForm" action="${pageContext.request.contextPath}/comm?command=logincheck" METHOD="post" onSubmit="return checkEmptySpace()">
 						<table align="center" class="login-form" >
 							<tr>
 								<td COLSPAN="3" ALIGN=CENTER></td>

@@ -21,7 +21,7 @@
 	<div align="center">
    
    ${requestScope.result} <p>
-   <form name = "checkForm" method="post" action="./confrimIDCheck">
+   <form name = "checkForm" method="post" action="${pageContext.request.contextPath}/confrimIDCheck">
             
             <input type="text" name="id" value="${param.id}">
             <input type="submit" value="ID 중복확인">

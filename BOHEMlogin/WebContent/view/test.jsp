@@ -9,6 +9,7 @@
 <title></title>
 </head>
 <body>
+
 <table>
 	<tr>
 	<td>recipeindex</td><td>recipetitle</td>
