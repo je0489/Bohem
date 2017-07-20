@@ -72,51 +72,47 @@
 	</script>
 </head>
 <body>
-	<div align=center>
-		<section>
+	<div align=center class="apply-form">
+		<section class="apply-form">
 			<form name = "applyForm" method="post" action="../apply" onSubmit="return checkEmptySpace()">
-				<table>
-					<caption><h1>BOHEM</h1>
-					<hr color="#5d5d5d"></caption>
+				<table class="apply-form">
+					<caption><h1 class=" section-heading">APPLY</h1>
+					<hr></caption>
 					<TR id="none"/>
 					<TR>
-						<th>ID</th>
-						<td><input type="text" name="ID" size="10" readonly="readonly">&nbsp;
-						<input type="button" name="ID_CHECK" value="ID CHECK" onClick="openConfirmID(this.form)">
-						</td>
+						<td><input type="text" placeholder="ID" name="ID" class = "apply-form btn btn-default btn-xl sr-button apply-form short" readonly="readonly"></td>
+						<td><input type="button" class="page-scroll btn btn-default btn-xl sr-button login-button" value="ID CHECK" onClick="openConfirmID(this.form)"></td>
 					</TR>
 					<TR>
-						<Th><label for=PW>PASSWORD</label></Th>
-						<TD><INPUT TYPE=PASSWORD NAME="PW" SIZE="20"></TD>
-					</TR>
-					<TR>	
-						<Th><label for=PW_CHECK>PASSWORD CONFIRM</label></Th>
-						<TD><INPUT TYPE=PASSWORD NAME=PW_CHECK SIZE="20" onblur="passchk()">&nbsp;
-						<INPUT TYPE=TEXT style= "border-width:0px; font-size:8pt" size="20" name="PWCK" value="비밀번호를 입력하세요" readonly="readonly"/></TD>
-					</TR>
-					<TR>	
-						<Th><label for=NAME>NAME</label></Th>
-						<TD><INPUT TYPE=TEXT NAME="NAME" SIZE=10 ></TD>
-					</TR>
-					<TR>	
-						<Th><label for=PHONENO>MOBILE NUMBER</label></Th>
-						<TD><SELECT SIZE=1 NAME="TEL1">
-						<option SELECTED> 010</option>
-						<option> 011</option>
-						<option> 017</option>
-						<option> 018</option>
-						<option> 019</option>
-						</SELECT> - <INPUT TYPE=TEXT  NAME="TEL2" SIZE="4" Maxlength=4> - <INPUT TYPE=TEXT NAME="TEL3" SIZE="4" Maxlength=4></TD>
+						<TD colspan="2"><INPUT TYPE=PASSWORD placeholder="PW" NAME="PW" class="apply-form btn btn-default btn-xl sr-button apply-form"></TD>
 					</TR>
 					<TR>
-						<Th><label for=EMAIL>E-MAIL</label></Th>
-						<TD><INPUT TYPE=TEXT NAME="EMAIL_ID" SIZE=15> @ <INPUT TYPE=TEXT NAME="EMAIL_ADDRESS" SIZE=15></TD>
+						<TD><INPUT TYPE=PASSWORD  placeholder="PW CONFIRM" NAME=PW_CHECK class="apply-form btn btn-default btn-xl sr-button apply-form" onblur="passchk()"></td>
+						<td><INPUT TYPE=TEXT style= "border-width:0px; font-size:8pt" size="20" name="PWCK" value="비밀번호를 입력하세요" readonly="readonly"/></TD>
+					</TR>
+					<TR>
+						<TD colspan="2"><INPUT TYPE=TEXT NAME="NAME" placeholder="NAME" class="apply-form btn btn-default btn-xl sr-button apply-form"></TD>
+					</TR>
+					<TR>
+						<TD colspan="2">
+							<SELECT SIZE=1 NAME="TEL1">
+							<option SELECTED> 010</option>
+							<option> 011</option>
+							<option> 017</option>
+							<option> 018</option>
+							<option> 019</option>
+							</SELECT> - <INPUT TYPE=TEXT  NAME="TEL2" SIZE="4" Maxlength=4> - <INPUT TYPE=TEXT NAME="TEL3" SIZE="4" Maxlength=4>
+						</TD>
+					</TR>
+					<TR>
+						<TD><INPUT TYPE=TEXT  placeholder="EMAIL" NAME="EMAIL_ID" class="apply-form btn btn-default btn-xl sr-button apply-form"></td>
+						<td>@ <INPUT TYPE=TEXT NAME="EMAIL_ADDRESS" class="btn btn-default btn-xl sr-button apply-form"></TD>
 					</TR>
 					<TR  id="none"/>
-					<TR >
-						<TD COLSPAN=2 ALIGN=CENTER>
-						<INPUT TYPE=SUBMIT VALUE=확인>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<INPUT TYPE=RESET VALUE=취소 onClick="location.href='loginView.jsp'"></TD>
+					<TR>
+						<TD ALIGN=CENTER>
+						<INPUT TYPE=SUBMIT VALUE=확인>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td><INPUT TYPE=RESET VALUE=취소 onClick="location.href='loginView.jsp'"></TD>
 					</TR>
 				</table>
 			</form>

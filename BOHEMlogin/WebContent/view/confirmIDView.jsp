@@ -11,11 +11,10 @@
    F2 {font-size:11pt; font-family:sans-serif;}
 </style>
 <script LANGUAGE = javascript>
-      function setID() {
+	function setID() {
          opener.document.applyForm.ID.value="${param.id}";
          self.close();
-      }
-     
+	}
 </script>
 </head>
 <body>
