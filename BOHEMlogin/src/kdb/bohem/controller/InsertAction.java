@@ -2,10 +2,14 @@ package kdb.bohem.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+import kdb.bohem.model.dto.Comment;
 import kdb.bohem.model.dto.NewComment;
 import kdb.bohem.model.service.CommentService;
 

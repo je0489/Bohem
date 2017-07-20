@@ -40,7 +40,7 @@
 	<title> BOHEM이 짱이거든요? </title>
 <script>
 	function openApplyView() {
-		url = "applyView.html";
+		url = "${pageContext.request.contextPath}/view/applyView.html";
 		var h = (screen.availHeight/2)-350;
 		var w = (screen.availWidth/2)-350;
 		var setting = "width=700,height=622,resizeable=yes,left="+ w + ",top=" + h;
@@ -48,7 +48,7 @@
 	}
 	
 	function doLogout() {
-		location.href="../comm?command=logout";
+		location.href="${pageContext.request.contextPath}/comm?command=logout";
 	}
 	
 	function checkEmptySpace() {
@@ -71,7 +71,7 @@
 				<c:when test="${empty sessionScope.userid}">
 					<h2 class="section-heading">LOGIN</h2>
 					 <hr class="light">
-					<form name = "loginForm" action="../comm?command=logincheck" METHOD="post" onSubmit="return checkEmptySpace()">
+					<form name = "loginForm" action="${pageContext.request.contextPath}/comm?command=logincheck" METHOD="post" onSubmit="return checkEmptySpace()">
 						<table align="center" class="login-form" >
 							<tr>
 								<td COLSPAN="3" ALIGN=CENTER></td>
