@@ -70,7 +70,7 @@
 			<c:choose>
 				<c:when test="${empty sessionScope.userid}">
 					<h2 class="section-heading">LOGIN</h2>
-					 <hr class="light">
+					<hr class="light">
 					<form name = "loginForm" action="${pageContext.request.contextPath}/comm?command=logincheck" METHOD="post" onSubmit="return checkEmptySpace()">
 						<table align="center" class="login-form" >
 							<tr>
@@ -89,16 +89,16 @@
 									<input type="submit" class="page-scroll btn btn-default btn-xl sr-button login-button" value="login">
 								</td>
 								<td>
-									<!-- <a class="simple-ajax-popup-align-top" href="applyView.html">  -->
-										<input type="button" onclick="openApplyView()" value="apply" class="page-scroll btn btn-default btn-xl sr-button apply-button">
-									<!--</a>  -->
+									<input type="button" onclick="openApplyView()" value="apply" class="page-scroll btn btn-default btn-xl sr-button apply-button">
 								</td>
 							</tr>
 						</table>
 					</form>
 				</c:when>
 				<c:otherwise>
-					<h2 class=" section-heading">${sessionScope.username} 님 맛있는 식사하세요 !</h2>
+					<h1 class=" section-heading" style="padding-top:13%;">
+					${sessionScope.username} 님 맛있는 식사하세요 !
+					</h1>
 					<hr class="light">
 					<h5> ' 나홀로레시피 ' 에서는 엄선된 레시피를 통해 <br>
 					    집에서 만들 수 있는 특별한 식사를 안내합니다.</h5><p>
