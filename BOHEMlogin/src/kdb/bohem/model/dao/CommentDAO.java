@@ -27,7 +27,5 @@ public interface CommentDAO {
 	 * @return : 1이상 삭제성공, 0 삭제실패
 	 * */
 	int delete(int comentIndex) throws SQLException;
-	
-	
-	
+
 }

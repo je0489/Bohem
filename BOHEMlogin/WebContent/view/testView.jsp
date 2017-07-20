@@ -26,6 +26,7 @@ function sendDelete(){
 </head>
 <body> 
 -->
+ <iframe width="560" height="315" src= "${requestScope.recipeinfo.recipeSrc}" frameborder="0"  style="float:left"></iframe>
 
 <table align="center" border="0" cellpadding="5" cellspacing="2" width="100%" bordercolordark="white" bordercolorlight="black">
 <colgroup>
@@ -53,8 +54,7 @@ function sendDelete(){
         
     </tr>
     -->
-    <iframe width="560" height="315" src= "${requestScope.recipeinfo.recipeSrc}" frameborder="0"  style="float:left"></iframe>
-    
+       
     <c:choose>
     <c:when test="${empty requestScope.newComList}">
 	<tr>
@@ -88,6 +88,7 @@ function sendDelete(){
 		        <form name = "requestForm" method = post action="comm?command=delete">
 		        	<input type =hidden name ="comentIndex" value="${newcomDto.comentIndex}">
 		        	<input type =hidden name = "recipeIndex" value="${requestScope.recipeinfo.recipeIndex}">
+		        	<input type="hidden" name="userIndex" value ="${sessionScope.userindex}">
 		        	<input type = button value ="삭제" onClick="submit()">
 		       	</form>
 		        </td>
@@ -109,9 +110,7 @@ function sendDelete(){
 		    </form>
 		    </tr>
 </table>
-${requestScope.recipeinfo.recipeIndex}
-${sessionScope.userindex}
-${sessionScope.username}
+
 <!-- 
 </body>
 </html>  -->
