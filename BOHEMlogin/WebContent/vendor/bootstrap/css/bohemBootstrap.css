@@ -4,15 +4,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-/* 지은 사용자 정의 */
-iframe {
-    width: 100%;
-    border : none;
-    overflow-x: hidden;
-    min-height:350px; 
-    margin-bottom:5%;
-}
-/**/
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -3025,6 +3016,40 @@ select[multiple].input-lg {
   border-radius: 4px;
 }
 /* 지은 사용자 정의 css -heejung */
+input.hidden {
+	width: 0%;
+    height: 0;
+    background: transparent;
+}
+input.btn.btn-primary.btn-xl.page-scroll.contentsView {
+	position: relative;
+    width: 100%;
+    position: absolute; 
+    width: 600px;
+    top: 85%;
+}
+table tr td.contentsView {
+	padding:0;
+}
+table.contentsView {
+	display: block;
+    width: 100%;
+    height: 590px;
+    border:1px solid black;
+	padding: 2% 3%;
+}
+iframe {
+    width: 100%;
+    border : none;
+    overflow-x: hidden;
+    min-height:350px; 
+    margin-bottom:5%;
+}
+iframe.contentsView {
+    width: 50%;
+    float:left;
+    min-height: 480px;
+}
 body.apply-form {
 	height:initial;
 }
@@ -3133,6 +3158,9 @@ label.color {
     color: #FD847C;
     padding-top: 1%;
 }
+label.contentsView.padding {
+	padding: 0 4%;
+}
 h1.section-heading,
 h2.section-heading,
 h3.section-heading,
@@ -3141,6 +3169,9 @@ h5.section-heading,
 h6.section-heading,
 lable.section-heading {
     font-weight: 700;
+}
+h5.section-heading.contentsView {
+	padding: 0 5%;
 }
 input.pwcheck{
 	border-width:0px; 
