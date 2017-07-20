@@ -8,7 +8,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kdb.bohem.model.dto.NewComment;
 import kdb.bohem.model.dto.Recipe;
+import kdb.bohem.model.service.CommentService;
 import kdb.bohem.model.service.RecipeService;
 
 public class RecipeSelectAction implements Action {
@@ -22,11 +24,15 @@ public class RecipeSelectAction implements Action {
 		String keyword = request.getParameter("keyword");
 		System.out.println("keyword¹Þ¾Æ¿È?"+keyword);
 		//System.out.println(keyword);
+		String index = null;
+		
 		try{
 			//System.out.println("Â§!");
-			List<Recipe> recipelist = RecipeService.select(keyword);
-			request.setAttribute("recipelist", recipelist);
-			url = "view/test.jsp";
+			Recipe recipeinfo = RecipeService.select(keyword);
+			request.setAttribute("recipeinfo", recipeinfo);
+			List<NewComment> newComList = CommentService.selectIndexAll(String.valueOf(recipeinfo.getRecipeIndex()));
+			request.setAttribute("newComList", newComList);
+			url = "view/testView.jsp";
 		}catch(SQLException e){
 			//System.out.println("±×·³¿ä±â?");
 			e.printStackTrace();

@@ -15,6 +15,7 @@
 	<td>recipeindex</td><td>recipetitle</td>
 	</tr>
 	<c:choose>
+
 	<c:when test = "${empty requestScope.recipelist}">
 	<tr>
 		<td colspan="2">
@@ -23,6 +24,7 @@
 	</tr>
 	</c:when>
 	<c:otherwise>
+
 	<c:forEach items = "${requestScope.recipelist}" var ="Recipe" >
 		<tr>
 		<td><p align="center"><span style="font-size:9pt;">
@@ -39,6 +41,7 @@
 		</td>
 		</tr>
 	</c:forEach>
+
 	</c:otherwise>
 	</c:choose>
 </table>

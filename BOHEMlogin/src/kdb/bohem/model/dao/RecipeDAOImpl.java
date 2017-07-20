@@ -33,12 +33,12 @@ public class RecipeDAOImpl implements RecipeDAO {
 	}
 
 	@Override
-	public List<Recipe> select(String keyword) throws SQLException {
+	public Recipe select(String keyword) throws SQLException {
 		//System.out.println("dapimpl"+keyword);
 		Connection con =DBUtil.getConnection();
 		PreparedStatement ps = null;
 		ResultSet rs= null;
-		List<Recipe> recipelist = new ArrayList<Recipe>();
+		Recipe recipeinfo = new Recipe();
 		System.out.println("dapimpl2"+keyword);
 		try{
 			
@@ -47,14 +47,13 @@ public class RecipeDAOImpl implements RecipeDAO {
 
 			rs = ps.executeQuery();
 			while(rs.next()){
-				Recipe recipe = new Recipe(rs.getInt(1), rs.getString(2),rs.getString(3), rs.getString(4));
-				recipelist.add(recipe);
+				recipeinfo = new Recipe(rs.getInt(1), rs.getString(2),rs.getString(3), rs.getString(4));
 			}
 		}
 		finally{
 			DBUtil.dbClose(con, ps, rs);
 		}
-		return recipelist;
+		return recipeinfo;
 	}
 
 	@Override
