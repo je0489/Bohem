@@ -184,7 +184,7 @@ table {
 }
 td,
 th {
-  padding: 0;
+  padding: 1% 0;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -3015,11 +3015,39 @@ select[multiple].input-lg {
   border-radius: 4px;
 }
 /* 지은 사용자 정의 css -heejung */
+body.apply-form {
+	height:initial;
+}
+iframe.max{
+	width: 600px;
+	min-height: 570px;
+}
+#padding {
+	padding-top : 2%;
+}
+input.btn.btn-default.btn-apply-form.sr-button.apply-form.mobile-part,
+select.btn.btn-default.btn-apply-form.sr-button.apply-form {
+	background-color: #FD847C;
+	color : white;
+	font-size: 15px;
+    position : relative;
+	text-align: center;
+	width: inherit;
+}
+input.btn.btn-default.btn-apply-form.sr-button.apply-form.text-inherit {
+	width: inherit;
+}
+table.apply-form {
+  margin: 0 5%;
+}
+table.login-form {
+    width: 50%;
+}
 input.apply-form::-webkit-input-placeholder  { color:#fff }
 input.apply-form::-moz-placeholder { color:#fff }
-input.btn.btn-default.btn-xl.sr-button.apply-form {
+input.btn.btn-default.btn-apply-form.sr-button.apply-form {
     background: #FD847C;
-    width: 70%;
+    width: 100%;
     font-size: 15px;
     position : relative;
 	text-align: left;
@@ -3027,6 +3055,7 @@ input.btn.btn-default.btn-xl.sr-button.apply-form {
 }
 input.btn.btn-default.btn-xl.sr-button.apply-form.short{
     width: 50%;
+    font-size:13px;
 }
 input.btn.btn-default.btn-xl.sr-button {
     width: 90%;
@@ -3042,15 +3071,34 @@ input.page-scroll.btn.btn-default.btn-xl.sr-button {
     background: #FF2A66;
     border: 3px solid #FF2A66;
 }
+input.page-scroll.btn.btn-default.btn-idcheck.sr-button {
+    font-size: 13px;
+    color: #FFF;
+    background: #FF2A66;
+    border: 3px solid #FF2A66;
+}
 input.page-scroll.btn.btn-default.btn-xl.sr-button.login-button {
 	width: 70%;
    	margin-top: 10%;
+}
+input.page-scroll.btn.btn-default.btn-idcheck.sr-button.appy-form.confirm-button {
+	width: inherit;
+   	margin-top: 5%;
+}
+input.page-scroll.btn.btn-default.btn-idcheck.sr-button.apply-button.cancel-button {
+	width: inherit;
+	background: white;
+    border: 3px solid #FF2A66;
+    color: #FF2A66;
 }
 input.page-scroll.btn.btn-default.btn-xl.sr-button.apply-button {
 	width: 70%;
     background: #FD847C;
     border: 3px solid;
     margin-top: 10%;
+}
+input.page-scroll.btn.btn-default.btn-xl.sr-button.idcheck-button {
+	width: 40%;
 }
 input.btn.btn-default.btn-xl.sr-button.login {
     text-align:left; 
@@ -3087,8 +3135,14 @@ h2.section-heading,
 h3.section-heading,
 h4.section-heading,
 h5.section-heading,
-h6.section-heading {
+h6.section-heading,
+lable.section-heading {
     font-weight: 700;
+}
+input.pwcheck{
+	border-width:0px; 
+	font-size:8pt; 
+	font-weight: 700;
 }
 /**/
 .btn:focus,
