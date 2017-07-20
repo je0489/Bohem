@@ -37,6 +37,12 @@ public class InsertAction implements Action {
 		}catch(SQLException e){
 			e.printStackTrace();
 			request.setAttribute("errorMsg", e.getMessage());//뷰페이지 ${errorMsg}
+			request.setAttribute("redirectPath","index.html");
+		}catch(NumberFormatException e){
+			String errormsg= "로그인이 필요합니다";
+			e.printStackTrace();
+			request.setAttribute("errorMsg",errormsg);
+			request.setAttribute("redirectPath","index.html");
 		}
 		
 		 request.getRequestDispatcher("errorView/error.jsp").forward(request, response);

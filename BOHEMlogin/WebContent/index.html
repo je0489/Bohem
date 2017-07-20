@@ -32,6 +32,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
 </head>
 
 <body id="page-top">
@@ -273,16 +274,9 @@
     $(document).ready(function() {
 
        $('.simple-ajax-popup-align-top').magnificPopup({
-          type: 'ajax',
-          alignTop: true,
-          overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
-       });
-
-       $('.simple-ajax-popup').magnificPopup({
-         items{
-        	 src:'<iframe src=>'
-        	 type:'ajax'
-         }
+          type: 'iframe'
+          
+          // as we know that popup content is tall we set scroll overflow by default to avoid jump
        });
     });
     

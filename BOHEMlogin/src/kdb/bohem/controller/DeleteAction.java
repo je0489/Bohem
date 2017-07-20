@@ -52,11 +52,13 @@ public class DeleteAction implements Action {
 					 throw new Exception("삭제되지 않았습니다.");
 				 }
 			} else {
-					throw new Exception("회원 달라서");
+					throw new Exception("삭제하실 수 없는 회원의 댓글입니다.");
+					
 			}
 		}catch(Exception e){
 			e.printStackTrace();
 			request.setAttribute("errorMsg", e.getMessage());
+			request.setAttribute("redirectPath","index.html");
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}

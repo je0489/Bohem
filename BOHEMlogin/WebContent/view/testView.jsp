@@ -109,7 +109,7 @@
 				<tr>
 					<form method="post" action="comm?command=insert" >
 						<td colspan="4" width="100%">
-							<input class="btn btn-primary btn-contentsView page-scroll contentsView" type="text" name="comment" placeholder="댓글 입력하세염" style="text-align: left;">
+							<input class="page-scroll btn btn-default btn-contentsView sr-button login-button" type="text" name="comment" placeholder="댓글 입력하세염" style="text-align: left;">
 							<input type="submit" class="hidden">
 						</td>
 						<input type="hidden" name="recipeIndex" value ="${requestScope.recipeinfo.recipeIndex}">

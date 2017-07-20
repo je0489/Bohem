@@ -3112,6 +3112,13 @@ input.page-scroll.btn.btn-default.btn-xl.sr-button.login-button {
 	width: 70%;
    	margin-top: 10%;
 }
+input.page-scroll.btn.btn-default.btn-contentsView.sr-button {
+    width: 98%;
+    font-size: 13px;
+    color: #FFF;
+    background: #FD847C;
+    border: 3px solid #FD847C;
+}
 input.page-scroll.btn.btn-default.btn-idcheck.sr-button.appy-form.confirm-button {
 	width: inherit;
    	margin-top: 5%;

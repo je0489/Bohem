@@ -37,6 +37,7 @@ public class RecipeSelectAction implements Action {
 			//System.out.println("그럼요기?");
 			e.printStackTrace();
 			request.setAttribute("errorMsg", e.getMessage());
+			request.setAttribute("redirectPath","index.html");
 		}
 		request.getRequestDispatcher(url).forward(request, response);	
 		}

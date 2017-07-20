@@ -23,6 +23,7 @@ public class RecipeAllAction implements Action {
 		}catch(SQLException e){
 			e.printStackTrace();
 			request.setAttribute("errorMsg", e.getMessage());
+			request.setAttribute("redirectPath","index.html");
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}
