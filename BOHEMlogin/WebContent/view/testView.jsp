@@ -26,6 +26,7 @@ function sendDelete(){
 </head>
 <body> 
 -->
+ <iframe width="560" height="315" src= "${requestScope.recipeinfo.recipeSrc}" frameborder="0"  style="float:left"></iframe>
 
 <table align="center" border="0" cellpadding="5" cellspacing="2" width="100%" bordercolordark="white" bordercolorlight="black">
 <colgroup>
@@ -53,8 +54,7 @@ function sendDelete(){
         
     </tr>
     -->
-    <iframe width="560" height="315" src= "${requestScope.recipeinfo.recipeSrc}" frameborder="0"  style="float:left"></iframe>
-    
+       
     <c:choose>
     <c:when test="${empty requestScope.newComList}">
 	<tr>
