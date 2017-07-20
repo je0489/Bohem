@@ -2249,7 +2249,6 @@ pre code {
 }
 table {
   background-color: transparent;
-  width: 50%;
 }
 th {
   text-align: left;
@@ -3016,6 +3015,19 @@ select[multiple].input-lg {
   border-radius: 4px;
 }
 /* 지은 사용자 정의 css -heejung */
+input.apply-form::-webkit-input-placeholder  { color:#fff }
+input.apply-form::-moz-placeholder { color:#fff }
+input.btn.btn-default.btn-xl.sr-button.apply-form {
+    background: #FD847C;
+    width: 70%;
+    font-size: 15px;
+    position : relative;
+	text-align: left;
+	color: white;
+}
+input.btn.btn-default.btn-xl.sr-button.apply-form.short{
+    width: 50%;
+}
 input.btn.btn-default.btn-xl.sr-button {
     width: 90%;
     font-size: 20px;
@@ -3070,9 +3082,15 @@ label.color {
     color: #FD847C;
     padding-top: 1%;
 }
-h2.section-heading {
+h1.section-heading,
+h2.section-heading,
+h3.section-heading,
+h4.section-heading,
+h5.section-heading,
+h6.section-heading {
     font-weight: 700;
 }
+/**/
 .btn:focus,
 .btn:active:focus,
 .btn.active:focus,

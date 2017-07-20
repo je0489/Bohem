@@ -55,6 +55,12 @@ p {
 section {
   padding: 50px 0;
 }
+/* 지은 사용자 정의 */
+section.apply-form {
+	margin : 2% 20%;
+	border : 3px solid #FD847C;
+}
+/**/
 aside {
   padding: 50px 0;
 }
