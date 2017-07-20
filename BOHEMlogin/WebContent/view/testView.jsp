@@ -110,9 +110,7 @@ function sendDelete(){
 		    </form>
 		    </tr>
 </table>
-${requestScope.recipeinfo.recipeIndex}
-${sessionScope.userindex}
-${sessionScope.username}
+
 <!-- 
 </body>
 </html>  -->
