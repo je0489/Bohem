@@ -38,9 +38,9 @@ public class InsertAction implements Action {
 			e.printStackTrace();
 			request.setAttribute("errorMsg", e.getMessage());//뷰페이지 ${errorMsg}
 			request.setAttribute("redirectPath","index.html");
-		}catch(NumberFormatException e){
+		}catch(NumberFormatException e2){
 			String errormsg= "로그인이 필요합니다";
-			e.printStackTrace();
+			e2.printStackTrace();
 			request.setAttribute("errorMsg",errormsg);
 			request.setAttribute("redirectPath","index.html");
 		}

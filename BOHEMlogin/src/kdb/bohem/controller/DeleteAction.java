@@ -21,7 +21,7 @@ public class DeleteAction implements Action {
 		
 		int comentIndex = Integer.parseInt(request.getParameter("comentIndex"));
 		String recipeIndex = request.getParameter("recipeIndex");
-		int userIndex = Integer.parseInt(request.getParameter("userIndex"));
+		int userIndex = 0;
 		//System.out.println(comentIndex);
 		//System.out.println("왔다");
 		String url ="errorView/error.jsp";
@@ -30,12 +30,17 @@ public class DeleteAction implements Action {
 		
 		try {
 			//System.out.println("왔니?"+comentIndex);
-			
+			userIndex=Integer.parseInt(request.getParameter("userIndex"));
 			comm = CommentService.selectByComentIndex(comentIndex);
 			
 			System.out.println(comm);
 		} catch (SQLException e1) {
 			e1.printStackTrace();
+		} catch(NumberFormatException e){
+			String errormsg= "로그인이 필요합니다";
+			e.printStackTrace();
+			request.setAttribute("errorMsg",errormsg);
+			request.setAttribute("redirectPath","index.html");
 		}
 		
 		
@@ -55,7 +60,13 @@ public class DeleteAction implements Action {
 					throw new Exception("삭제하실 수 없는 회원의 댓글입니다.");
 					
 			}
-		}catch(Exception e){
+		}catch(NullPointerException e){
+			String errormsg= "로그인이 필요합니다";
+			e.printStackTrace();
+			request.setAttribute("errorMsg",errormsg);
+			request.setAttribute("redirectPath","index.html");
+		}
+		catch(Exception e){
 			e.printStackTrace();
 			request.setAttribute("errorMsg", e.getMessage());
 			request.setAttribute("redirectPath","index.html");
