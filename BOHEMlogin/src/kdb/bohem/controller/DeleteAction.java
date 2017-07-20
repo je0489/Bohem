@@ -17,6 +17,7 @@ public class DeleteAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int comentIndex = Integer.parseInt(request.getParameter("comentIndex"));
+		String recipeIndex = request.getParameter("recipeIndex");
 		//System.out.println(comentIndex);
 		//System.out.println("왔다");
 		String url ="errorView/error.jsp";
@@ -34,7 +35,7 @@ public class DeleteAction implements Action {
 			if(CommentService.delete(comentIndex) > 0){//삭제성공
 				List<Comment> comlist = CommentService.selectAll();
 				request.setAttribute("comlist", comlist);
-				url="view/commentList.jsp";
+				url="comm?command=recipeindexselect&index="+recipeIndex;
 				
 				//response.sendRedirect("view/list.jsp");
 				// return;//메소드 빠져나가라.

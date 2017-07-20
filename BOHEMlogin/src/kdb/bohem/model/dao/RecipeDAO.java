@@ -10,4 +10,6 @@ public interface RecipeDAO {
 	List<Recipe> selectAll() throws SQLException;
 	
 	List<Recipe> select(String keyword) throws SQLException;
+	
+	Recipe selectIndex(String index) throws SQLException;
 }

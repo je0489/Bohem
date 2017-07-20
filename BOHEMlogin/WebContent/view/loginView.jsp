@@ -34,10 +34,10 @@
 	<title> BOHEM이 짱이거든요? </title>
 <script>
 	function openApplyView() {
-		location.href="view/applyView.jsp";
+		location.href="applyView.jsp";
 	}
 	function doLogout() {
-		location.href="comm?command=logout";
+		location.href="../comm?command=logout";
 	}
 </script>
 </head>
@@ -45,7 +45,7 @@
 	<div align=center>
 		<section class="bg-primary">
 			<c:choose>
-				<c:when test="${empty sessionScope.id}">
+				<c:when test="${empty sessionScope.userid}">
 						<h2 class="section-heading">LOGIN</h2>
 					     <hr class="light">
 					<form action="../comm?command=logincheck" METHOD="post">

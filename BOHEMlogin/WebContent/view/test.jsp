@@ -30,6 +30,12 @@
 		<td><p align="center"><span style="font-size:9pt;">
 		 ${Recipe.recipeTitle}</span></p>
 		</td>
+		<td><p align="center"><span style="font-size:9pt;">
+		 ${Recipe.recipeSrc}</span></p>
+		</td>
+		<td><p align="center"><span style="font-size:9pt;">
+		 ${Recipe.recipeContent}</span></p>
+		</td>
 		</tr>
 	</c:forEach>
 	</c:otherwise>

@@ -34,7 +34,7 @@ public class ApplyServlet extends HttpServlet {
 		try{	
 		int result = UserDao.insert(UserDto);
 		if(result>0){
-			urlPath = "view/homeView.jsp";
+			urlPath = "view/loginView.jsp";
 		}else{
 			request.setAttribute("errorMsg","µî·Ï¾ÈµÊ");
 			request.setAttribute("redirectPath","index.html");

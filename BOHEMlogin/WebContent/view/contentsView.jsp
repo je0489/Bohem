@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,7 @@
 		function resizeYoutube() { 
 			$("iframe").each(function() { 
 				if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){
-				 	$(this).css("width","70%");
+				 	$(this).css("width","50%");
 				 	$(this).css("height",Math.ceil(parseInt($(this).css("width")) * 480 / 854 ) + "px");
 				} 
 			}); 
@@ -34,13 +38,11 @@
 		}
 	</script>
 	<style type="text/css">
-		section { 
-			padding : 15% 2%; 
-			text-align: center; 
-		}
+
 			section article { 
-				margin: 1% 15%; 
+				
 				border: solid rgba(161, 161, 161,0.2) 1px;
+				float:left;
 			}
 		table {
 			margin : 0 1%;
@@ -53,22 +55,29 @@
 			text-align: right;
 		}
 		input[type="text"]{
-			width : 99%;
+			width : 100%;
 		}
 	</style>
 </head>
 <body>
 	<section>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/mt2Xt-H9eXU?autoplay=1" frameborder="0" allowfullscreen></iframe>
-		<article>
-		<form method="post" action="comm?command=insert" >
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/mt2Xt-H9eXU?autoplay=1" frameborder="0"  style="float:left"></iframe>
+	<article style="marign:0px;width:400px;height:200px;float:left">
+		<form method="post" action="../comm?command=insert" >
 			<table>
+				<tr>
+				<td colspan="2" id= "recipetitle" >제목영역</td>
+				</tr>
+				<tr>
+				<td colspan="2" id= "recipecontent" >내용영역<br><br><br><br><br><br><br><br></td>
+				</tr>
+				
 				<tr>
 					<td colspan="2" id="icon"><label onclick="liking()">♥</label></td>
 				</tr>
 				
 				<tr>
-					<td colspan="2"><iframe width="100%" src="comm" frameborder="0" allowfullscreen></iframe></td>
+					<td colspan="2"><iframe width="100%" src="../comm" frameborder="0" allowfullscreen></iframe></td>
 				</tr>
 				
 				<tr>

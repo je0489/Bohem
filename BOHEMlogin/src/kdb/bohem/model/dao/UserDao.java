@@ -38,7 +38,7 @@ public interface UserDao {
 	boolean logout()throws SQLException;
 	
 	String whoami(String userid) throws SQLException;
-	 
+	int myindex(String userid) throws SQLException, NullPointerException;
 }
 
 

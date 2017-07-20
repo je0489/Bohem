@@ -32,7 +32,7 @@
 	<title> BOHEM APPLY</title>
 	<script language=javascript>		
 		function openConfirmID(input) {
-			url = "view/confirmIDView.jsp";
+			url = "confirmIDView.jsp";
 			window.open(url,"confirm","width=330,height=140");
 		}
 		

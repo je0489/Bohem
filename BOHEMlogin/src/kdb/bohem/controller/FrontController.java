@@ -53,6 +53,7 @@ public class FrontController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String key=request.getParameter("command");
+		System.out.println("asdf");
 		if(key==null) key="select";
 		
 		Action action= map.get(key);

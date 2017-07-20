@@ -26,11 +26,12 @@ function sendDelete(){
 </head>
 <body> 
 -->
+
 <table align="center" border="0" cellpadding="5" cellspacing="2" width="100%" bordercolordark="white" bordercolorlight="black">
 <colgroup>
 		<!--<col width="7%" />-->
-		<col width="10%"/>
 		<col width="70%"/>
+		<col width="10%"/>
 		<col width="20%"/>
 	</colgroup>
 	<!-- <tr>
@@ -52,17 +53,18 @@ function sendDelete(){
         
     </tr>
     -->
+    <iframe width="560" height="315" src= "${requestScope.recipeinfo.recipeSrc}" frameborder="0"  style="float:left"></iframe>
     
     <c:choose>
-    <c:when test="${empty requestScope.newComlist}">
+    <c:when test="${empty requestScope.newComList}">
 	<tr>
-        <td colspan="4">
+        <td colspan="3">
             <p align="center"><b><span style="font-size:9pt;">등록된 댓글이 없습니다.</span></b></p>
         </td>
     </tr>
     </c:when>
     <c:otherwise>
-	<c:forEach items="${requestScope.comlist}" var="comDto" varStatus="state">
+	<c:forEach items="${requestScope.newComList}" var="newcomDto" varStatus="state">
 		    <tr>
 		        <!-- <td bgcolor="">
 		            <p align="center"><span style="font-size:9pt;">
@@ -70,32 +72,46 @@ function sendDelete(){
 		        </td> -->
 		        <td bgcolor="">
 		            <p align="center"><span style="font-size:9pt;">
-		           ${comDto.userIndex}</span></p>
+		           ${newcomDto.comentComent}</span></p>
 		        </td>
 		        <td bgcolor="">
 					<p><span style="font-size:9pt;">
-					 ${comDto.comentComent}</span></p>
+					 ${newcomDto.username}</span></p>
 		        </td>
 		        
 		        
 		        <td bgcolor="">
 		            <p align="center"><span style="font-size:9pt;">
-		            ${comDto.comentDate}</span></p>
+		            ${newcomDto.comentDate}</span></p>
 		        </td>
-		        <td>
-		        
+		  		<td>
 		        <form name = "requestForm" method = post action="comm?command=delete">
-		        	<input type =hidden name ="userIndex" value="${comDto.userIndex}">
-		        	<input type =hidden name ="comentIndex" value="${comDto.comentIndex}">
-		        	<input type =hidden name ="command" value = "">
+		        	<input type =hidden name ="comentIndex" value="${newcomDto.comentIndex}">
+		        	<input type =hidden name = "recipeIndex" value="${requestScope.recipeinfo.recipeIndex}">
 		        	<input type = button value ="삭제" onClick="submit()">
 		       	</form>
 		        </td>
 		    </tr>
+		    
     </c:forEach>
 	</c:otherwise>
     </c:choose>
+    <tr>
+		    <form method="post" action="comm?command=insert" >
+		    <td colspan="2" width="100%">
+		    <input type="text" name="comment" placeholder="댓글 입력하세염"></td>
+		    <input type="hidden" name="recipeIndex" value ="${requestScope.recipeinfo.recipeIndex}">
+		    <input type="hidden" name="userIndex" value ="${sessionScope.userindex}">
+		    <input type="hidden" name="username" value ="${sessionScope.username}">
+			<!-- <input type = button value ="등록" onClick="submit()">-->
+			<td id="button"><input type="submit" value="등록"></td>
+		    
+		    </form>
+		    </tr>
 </table>
+${requestScope.recipeinfo.recipeIndex}
+${sessionScope.userindex}
+${sessionScope.username}
 <!-- 
 </body>
 </html>  -->

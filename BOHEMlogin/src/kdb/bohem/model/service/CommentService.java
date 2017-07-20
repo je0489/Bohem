@@ -5,6 +5,7 @@ import java.util.List;
 
 import kdb.bohem.model.dao.CommentDAOImpl;
 import kdb.bohem.model.dto.Comment;
+import kdb.bohem.model.dto.NewComment;
 
 public class CommentService {
 
@@ -16,11 +17,15 @@ public class CommentService {
 	public static List<Comment> selectAll() throws SQLException{
 		return comDao.selectAll();
 	}
+	
+	public static List<NewComment> selectIndexAll(String recipeindex) throws SQLException {
+		return comDao.selectIndexAll(recipeindex);
+	}
 	/**
 	 * 코멘트 삽입하는 메소드 호출
 	 * */
-	public static int insert(Comment comment) throws SQLException{
-		return comDao.insert(comment);
+	public static int insert(NewComment newcomment) throws SQLException{
+		return comDao.insert(newcomment);
 	}
 	/**
 	 *CommentDAOImpl의 코멘트 번호에 해당하는 코멘트 검색하는 메소드 호출

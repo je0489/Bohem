@@ -13,7 +13,7 @@ public class LogoutAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//System.out.println("로그아웃 실행");
+		System.out.println("로그아웃 실행");
 		String url="errorView/error.jsp";
 		HttpSession session = request.getSession(false);
 		LoginCheckService LoginCheckService = new LoginCheckService();
