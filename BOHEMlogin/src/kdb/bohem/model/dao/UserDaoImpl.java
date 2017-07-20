@@ -105,5 +105,27 @@ public class UserDaoImpl implements UserDao {
 	public boolean logout() throws SQLException{
 		return false;
 	}
+	
+	public String whoami(String userid) throws SQLException{
+		Connection con = DBUtil.getConnection();
+		PreparedStatement ps= null;
+		ResultSet rs= null;
+		UserDto user = null;
+		try{
+			ps=con.prepareStatement("select * from userinfo where userid=?");
+			ps.setString(1, userid.trim());
+			rs=ps.executeQuery();
+			while(rs.next()){
+				user =  new UserDto(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
+			}
+			return user.getUsername();
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			DBUtil.dbClose(con, ps, rs);
+		}
+		return user.getUsername();
+	}
 
 }

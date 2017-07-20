@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import kdb.bohem.model.dto.UserDto;
 import kdb.bohem.model.service.LoginCheckService;
 
 
@@ -26,8 +27,12 @@ public class LoginCheckAction implements Action {
 			}
 			
 			boolean loginCheck = LoginCheckService.checkIdPwd(userid, userpwd);
+			String username = LoginCheckService.whoami(userid);
+			//System.out.println(username);
+			
 			if (loginCheck==true){
 				session.setAttribute("id",userid);
+				session.setAttribute("username", username);
 			}
 			url="view/loginView.jsp";
 		
