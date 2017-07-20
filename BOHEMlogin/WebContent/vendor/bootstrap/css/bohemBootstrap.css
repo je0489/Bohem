@@ -4,6 +4,15 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/* 지은 사용자 정의 */
+iframe {
+    width: 100%;
+    border : none;
+    overflow-x: hidden;
+    min-height:350px; 
+    margin-bottom:5%;
+}
+/**/
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -3106,13 +3115,6 @@ input.btn.btn-default.btn-xl.sr-button.login {
     font-size: 15px; 
     text-transform: lowercase; 
     margin-bottom:2%;
-}
-iframe {
-    width: 100%;
-    border : none;
-    overflow-x: hidden;
-    min-height:350px; 
-    margin-bottom:5%;
 }
 img.icon {
 	width : 50%;
