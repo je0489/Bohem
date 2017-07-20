@@ -11,25 +11,27 @@ import javax.servlet.http.HttpServletResponse;
 import com.oreilly.servlet.MultipartRequest;
 
 import kdb.bohem.model.dto.Comment;
+import kdb.bohem.model.dto.NewComment;
 import kdb.bohem.model.service.CommentService;
 
 public class InsertAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//System.out.println("»ðÀÔÇÔ¼ö?");
+		System.out.println("»ðÀÔÇÔ¼ö?");
 		try{
-			
-			int comentIndex = 1;
+
+			int comentIndex = 0;
 			String comentComent = request.getParameter("comment");
-			int userIndex = 1;
-			int recipeIndex=1;
-			String comentDate = "2017.07.18";
+			int userIndex = Integer.parseInt(request.getParameter("userIndex"));
+			String username = request.getParameter("username");
+			int recipeIndex=Integer.parseInt(request.getParameter("recipeIndex"));
+			String comentDate = null;
 			
-			Comment coment= new Comment(comentIndex, comentComent, userIndex, recipeIndex, comentDate);
-			System.out.println(coment);
-			if(CommentService.insert(coment)>0){
-				response.sendRedirect("view/contentsView.html");
+			NewComment newcoment= new NewComment(comentIndex, comentComent, username, comentDate, userIndex, recipeIndex);
+			System.out.println(newcoment);
+			if(CommentService.insert(newcoment)>0){
+				response.sendRedirect("comm?command=recipeindexselect&index="+recipeIndex);
 				return;
 			}
 			

@@ -43,7 +43,7 @@
 		location.href="applyViewHTML.html";
 	}
 	function doLogout() {
-		location.href="comm?command=logout";
+		location.href="../comm?command=logout";
 	}
 	
 	 $(document).ready(function() {
@@ -64,9 +64,9 @@
 	<div align=center>
 		<section class="bg-primary">
 			<c:choose>
-				<c:when test="${empty sessionScope.id}">
+				<c:when test="${empty sessionScope.userid}">
 					<h2 class="section-heading">LOGIN</h2>
-					<hr class="light">
+					 <hr class="light">
 					<form action="../comm?command=logincheck" METHOD="post">
 						<table align="center" class="login-form">
 							<tr>

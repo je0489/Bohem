@@ -17,4 +17,8 @@ public class RecipeService {
 		System.out.println("recipeservice");
 		return recipeDao.select(keyword);
 	}
+	
+	public static Recipe selectIndex(String index) throws SQLException {
+		return recipeDao.selectIndex(index);
+	}
 }

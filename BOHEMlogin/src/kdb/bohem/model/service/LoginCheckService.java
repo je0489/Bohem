@@ -21,5 +21,7 @@ public class LoginCheckService {
 	public String whoami(String userid) throws SQLException{
 		return userDao.whoami(userid);
 	}
-	
+	public int myindex(String userid) throws SQLException, NullPointerException{
+		return userDao.myindex(userid);
+	}
 }

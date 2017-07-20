@@ -28,11 +28,14 @@ public class LoginCheckAction implements Action {
 			
 			boolean loginCheck = LoginCheckService.checkIdPwd(userid, userpwd);
 			String username = LoginCheckService.whoami(userid);
+			String userindex = String.valueOf(LoginCheckService.myindex(userid));
+			
 			//System.out.println(username);
 			
 			if (loginCheck==true){
-				session.setAttribute("id",userid);
+				session.setAttribute("userid",userid);
 				session.setAttribute("username", username);
+				session.setAttribute("userindex", userindex);
 			}
 			url="view/loginView.jsp";
 		
