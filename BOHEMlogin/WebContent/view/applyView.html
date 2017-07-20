@@ -31,7 +31,10 @@
 	<script language=javascript>		
 		function openConfirmID(input) {
 			url = "confirmIDView.jsp";
-			window.open(url,"confirm","width=330,height=140");
+			var h = (screen.availHeight/2) - 250;
+			var w = (screen.availWidth/2) - 500;
+			var setting = "width=330,height=140,resizeable=yes,left="+ w + ",top=" + h;
+			window.open(url,"confirm",setting);
 		}
 		
 		function passchk(){   // 비밀번호 재확인
@@ -111,7 +114,7 @@
 					<TR style="text-align:center">
 						<td colspan="2" id="padding">
 							<INPUT TYPE="submit" VALUE="GET STARTED!" class="page-scroll btn btn-default btn-idcheck sr-button apply-form confirm-button">
-							<INPUT TYPE="reset" class="page-scroll btn btn-default btn-idcheck sr-button apply-button cancel-button" VALUE="CANCEL" onClick="top.location.href='../index.html'">
+							<INPUT TYPE="button" class="page-scroll btn btn-default btn-idcheck sr-button apply-button cancel-button" VALUE="CANCEL" onClick="self.close()">
 						</td>
 					</TR>
 				</table>

@@ -10,7 +10,7 @@
 	죄송합니다. 문제가 발생하였습니다.<br>
 	발생된 문제 : ${requestScope.errorMsg}<br>
 
-	<a href="index.html"> 메인페이지로 돌아가기</a>
+	<a href="index.html" target="_top"> 메인페이지로 돌아가기</a>
 	 <a href="javascript:history.back()">뒤로가기</a>
 </body>
 </html>

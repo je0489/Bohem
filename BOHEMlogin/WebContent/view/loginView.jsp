@@ -40,24 +40,28 @@
 	<title> BOHEM이 짱이거든요? </title>
 <script>
 	function openApplyView() {
-		location.href="applyViewHTML.html";
+		url = "applyView.html";
+		var h = (screen.availHeight/2)-350;
+		var w = (screen.availWidth/2)-350;
+		var setting = "width=700,height=610,resizeable=yes,left="+ w + ",top=" + h;
+		window.open(url,"BOHEM APPLY",setting);
 	}
+	
 	function doLogout() {
 		location.href="../comm?command=logout";
 	}
 	
-	 $(document).ready(function() {
-	       $('.simple-ajax-popup-align-top').magnificPopup({
-	          type: 'ajax',
-	          alignTop: true,
-	          overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
-	       });
+	function checkEmptySpace() {
+		var input = document.loginForm;
+		if (input.ID.value=="") {
+				alert("아이디를 입력하세요");
+			return false;
+		} else if(input.PW.value=="") {
+				alert("비밀번호를 입력하세요.");
+			return false;
+		}
+	}
 
-	       $('.simple-ajax-popup').magnificPopup({
-	          type: 'ajax'
-	       });
-	       
-	    });
 </script>
 </head>
 <body style="background: #FD847C;">
@@ -67,8 +71,8 @@
 				<c:when test="${empty sessionScope.userid}">
 					<h2 class="section-heading">LOGIN</h2>
 					 <hr class="light">
-					<form action="../comm?command=logincheck" METHOD="post">
-						<table align="center" class="login-form">
+					<form name = "loginForm" action="../comm?command=logincheck" METHOD="post" onSubmit="return checkEmptySpace()">
+						<table align="center" class="login-form" >
 							<tr>
 								<td COLSPAN="3" ALIGN=CENTER></td>
 							</tr>
@@ -85,9 +89,9 @@
 									<input type="submit" class="page-scroll btn btn-default btn-xl sr-button login-button" value="login">
 								</td>
 								<td>
-									<a class="simple-ajax-popup-align-top" href="applyView.html" target="_top_top">
-										<input type="button" value="apply" class="page-scroll btn btn-default btn-xl sr-button apply-button">
-									</a>
+									<!-- <a class="simple-ajax-popup-align-top" href="applyView.html">  -->
+										<input type="button" onclick="openApplyView()" value="apply" class="page-scroll btn btn-default btn-xl sr-button apply-button">
+									<!--</a>  -->
 								</td>
 							</tr>
 						</table>

@@ -59,7 +59,7 @@
                         <a class="page-scroll" href="#portfolio">Recipe</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#search">Search</a>
                     </li>
                 </ul>
             </div>
@@ -69,7 +69,7 @@
     </nav>
 
     <header>
-        <div class="header-content">
+        <div class="header-content" style="padding-bottom:10%;">
             <div class="header-content-inner">
                 <h1 id="homeHeading">
                 	<u>당신의 더 나은 식사를 위해</u><br>
@@ -114,31 +114,31 @@
 			<div class="col-lg-3 col-md-6 text-center">
 				<div class="service-box">
 					<img class="icon" src="img/service01.png">
-					<h3>cooking video</h3>
+					<h3 class="section-heading" style="padding-top: 2%;">cooking video</h3>
 					<p class="text-muted">카테고리, 상황에 맞는<br>맞춤형 레시피 가이드</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 text-center">
 				<div class="service-box">
 					<img class="icon" src="img/service02.png">
-					<h3>social recipe</h3>
+					<h3 class="section-heading" style="padding-top: 2%;">social recipe</h3>
 					<p class="text-muted">사람들과 의견을 공유하며<br>만들어나가는 레시피</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 text-center">
 				<div class="service-box">
 					<img class="icon" src="img/service03.png">
-					<h3>shopping</h3>
+					<h3 class="section-heading" style="padding-top: 2%;">shopping</h3>
 					<p class="text-muted">레시피 비디오에 나오는<br>재료들을 한 번에 쇼핑</p>
-					<h6>* 향후 서비스 예정 </h6>
+					<h6 class="section-heading" style="padding-top: 2%;">* 향후 서비스 예정 </h6>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 text-center">
 				<div class="service-box">
 					<img class="icon" src="img/service04.png">
-					<h3>delivery</h3>
+					<h3 class="section-heading" style="padding-top: 2%;">delivery</h3>
 					<p class="text-muted">완성된 요리를<br>집 앞으로 배달</p>
-					<h6>* 향후 서비스 예정 </h6>
+					<h6 class="section-heading" style="padding-top: 2%;">* 향후 서비스 예정 </h6>
 				</div>
 			</div>
 		</div>
@@ -236,35 +236,17 @@
         </div>
     </section>
     
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
-            </div>
-        </div>
-    </aside>
-
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <section class="no-padding" id="search">
+	    <aside class="bg-dark">
+	        <div class="container text-center">
+	            <div class="call-to-action">
+	                <h1 class="section-heading">무엇을 먹고 싶으세요?</h1>
+	                <h3 class="section-heading" style="padding: 0 0 2%;">생각나는 음식이 있다면</h3>
+	                <a href="#page-top" class="btn btn-primary btn-xl page-scroll">검색하기</a>
+	            </div>
+	        </div>
+	    </aside>
+	</section>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -289,7 +271,6 @@
        $('.simple-ajax-popup').magnificPopup({
           type: 'ajax'
        });
-       
     });
     
 </script>

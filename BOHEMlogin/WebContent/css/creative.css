@@ -57,8 +57,8 @@ section {
 }
 /* 지은 사용자 정의 */
 section.apply-form {
-	margin : 2% 2%;
-	border : 3px solid #FD847C;
+	margin : 4% 2%;
+	border : 7px solid #FD847C;
 }
 input.btn.btn-default.btn-xl.sr-button {
     margin-top: 2%;
