@@ -137,12 +137,10 @@
 		}
 		function liking(){
 			if(likingState == false ) {
- 				alert("좋아요 눌렀다");
  				$('#icon').css('color','#FD847C');
  				likingState = true;
 			}
  			else {
- 				alert("좋아요 취소");
  				$('#icon').css('color','black');
  				likingState = false;
  			}

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<script>
-		var Msg = '에러발생 : ' + '${requestScope.errorMsg}';
+		var Msg = '에러다 error : ' + '${requestScope.errorMsg}';
 		alert(Msg);
 		
 		top.location.href='${requestScope.redirectPath}';
