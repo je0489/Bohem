@@ -70,7 +70,7 @@ public class RecipeDAOImpl implements RecipeDAO {
 
 			rs = ps.executeQuery();
 			while(rs.next()){
-				recipe = new Recipe(rs.getInt(1), rs.getString(2),rs.getString(3), rs.getString(4));
+				recipe = new Recipe(rs.getInt(1), rs.getString(2).replaceAll("\r\n", "<br>"),rs.getString(3), rs.getString(4));
 				
 			}
 		}
